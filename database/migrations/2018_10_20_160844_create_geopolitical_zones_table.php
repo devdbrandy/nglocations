@@ -13,7 +13,7 @@ class CreateGeopoliticalZonesTable extends Migration
      */
     public function up()
     {
-        Schema::create('geopolitical_zones', function (Blueprint $table) {
+        Schema::create('gp_zones', function (Blueprint $table) {
             $table->string('code');
             $table->string('zone');
         });
@@ -26,6 +26,6 @@ class CreateGeopoliticalZonesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('geopolitical_zones');
+        Schema::dropIfExists('gp_zones');
     }
 }
