@@ -18,7 +18,7 @@ class CreateStatesTable extends Migration
             $table->string('code');
             $table->string('name');
             $table->string('capital');
-            $table->string('slug');
+            $table->string('alias');
             $table->string('gp_zone');
         });
     }

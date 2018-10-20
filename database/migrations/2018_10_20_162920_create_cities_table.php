@@ -17,7 +17,7 @@ class CreateCitiesTable extends Migration
             $table->increments('id');
             $table->string('state_id');
             $table->string('name');
-            $table->string('slug');
+            $table->string('alias');
             $table->string('lat');
             $table->string('lon');
         });
