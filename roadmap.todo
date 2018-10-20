@@ -1,0 +1,13 @@
+NGLOCATION:
+  Core Features:
+    ☐ Lists all states in the country
+    ☐ Every states with her capital, cities and sub local government areas
+    ☐ Provision of cordinates for every location
+
+  API Routes:
+    ☐ An API that allows users to get all the states in the country
+    ☐ An API that allows users to get details about a state
+    ☐ An API that allows users to get all the cities in a state
+    ☐ An API that allows users to get details about a city
+    ☐ An API that allows users to get all local government areas in a city
+    ☐ Enable users to pass custom params to api routes for addtitional data [e.g city, lga, cordinates]

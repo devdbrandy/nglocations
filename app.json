@@ -1,0 +1,20 @@
+{
+  "name": "nglocal",
+  "description": "The NgLocal REST API allows users to retrieve information of all states in Nigeria",
+  "repository": "https://github.com/devdbrandy/nglocation",
+  "keywords": ["php", "laravel", "rest", "api", "nigeria", "ng", "location", "state"],
+  "env": {
+    "APP_ENV": "production",
+    "APP_NAME": "nglocal",
+    "APP_KEY": {
+      "description": "Application encryption key - Copy KEY from https://keygen.io, and append to `base64:` eg. base64:KEY",
+      "required": true
+    },
+    "APP_DEBUG": "false",
+    "LOG_CHANNEL": "errorlog"
+  },
+  "buildpacks": [],
+  "scripts": {
+    "postdeploy": "php artisan migrate --seed"
+  }
+}
