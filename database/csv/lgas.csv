@@ -12,9 +12,9 @@ AB,Abia,Ohafia,5.4308921,7.5247243
 AB,Abia,Osisioma,5.4308921,7.5247243
 AB,Abia,Ugwunagbo,5.4308921,7.5247243
 AB,Abia,Ukwa East,5.4308921,7.5247243
-AB,Abia,Ukwa  West,5.4308921,7.5247243
+AB,Abia,Ukwa West,5.4308921,7.5247243
 AB,Abia,Umuahia North,5.4308921,7.5247243
-AB,Abia,Umuahia  South,5.4308921,7.5247243
+AB,Abia,Umuahia South,5.4308921,7.5247243
 AB,Abia,Umu - Nneochi,5.4308921,7.5247243
 AD,Adamawa,Demsa,9.3250497,12.4380581
 AD,Adamawa,Fufore,9.3250497,12.4380581
@@ -87,7 +87,7 @@ AN,Anambra,Ogbaru,6.2757656,7.0068393
 AN,Anambra,Onitsha-north,6.2757656,7.0068393
 AN,Anambra,Onitsha -south,6.2757656,7.0068393
 AN,Anambra,Orumba North,6.2757656,7.0068393
-AN,Anambra,Orumba  South,6.2757656,7.0068393
+AN,Anambra,Orumba South,6.2757656,7.0068393
 AN,Anambra,Oyi,6.2757656,7.0068393
 BA,Bauchi,Alkaleri,10.30982,9.845172
 BA,Bauchi,Bauchi,10.30982,9.845172
@@ -189,8 +189,8 @@ DT,Delta,Aniocha North,5.5324624,5.8987139
 DT,Delta,Aniocha - South,5.5324624,5.8987139
 DT,Delta,Bomadi,5.5324624,5.8987139
 DT,Delta,Burutu,5.5324624,5.8987139
-DT,Delta,Ethiope  East,5.5324624,5.8987139
-DT,Delta,Ethiope  West,5.5324624,5.8987139
+DT,Delta,Ethiope East,5.5324624,5.8987139
+DT,Delta,Ethiope West,5.5324624,5.8987139
 DT,Delta,Ika North- East,5.5324624,5.8987139
 DT,Delta,Ika - South,5.5324624,5.8987139
 DT,Delta,Isoko North,5.5324624,5.8987139
@@ -207,12 +207,12 @@ DT,Delta,Ughelli North,5.5324624,5.8987139
 DT,Delta,Ughelli South,5.5324624,5.8987139
 DT,Delta,Ukwuani,5.5324624,5.8987139
 DT,Delta,Uvwie,5.5324624,5.8987139
-DT,Delta,Warri  North,5.5324624,5.8987139
+DT,Delta,Warri North,5.5324624,5.8987139
 DT,Delta,Warri South,5.5324624,5.8987139
-DT,Delta,Warri South  West,5.5324624,5.8987139
+DT,Delta,Warri South West,5.5324624,5.8987139
 EB,Ebonyi,Abakaliki,6.177973,7.9592863
 EB,Ebonyi,Afikpo North,6.177973,7.9592863
-EB,Ebonyi,Afikpo  South,6.177973,7.9592863
+EB,Ebonyi,Afikpo South,6.177973,7.9592863
 EB,Ebonyi,Ebonyi,6.177973,7.9592863
 EB,Ebonyi,Ezza North,6.177973,7.9592863
 EB,Ebonyi,Ezza South,6.177973,7.9592863
@@ -231,7 +231,7 @@ ED,Edo,Esan South East,6.5438101,5.8987139
 ED,Edo,Esan West,6.5438101,5.8987139
 ED,Edo,Etsako Central,6.5438101,5.8987139
 ED,Edo,Etsako East,6.5438101,5.8987139
-ED,Edo,Etsako  West,6.5438101,5.8987139
+ED,Edo,Etsako West,6.5438101,5.8987139
 ED,Edo,Igueben,6.5438101,5.8987139
 ED,Edo,Ikpoba/okha,6.5438101,5.8987139
 ED,Edo,Oredo,6.5438101,5.8987139
@@ -309,7 +309,7 @@ IM,Imo,Nwangele (onu-nwangele Amaigbo),5.5214533,6.9209135
 IM,Imo,Obowo (otoko),5.5214533,6.9209135
 IM,Imo,Oguta (oguta),5.5214533,6.9209135
 IM,Imo,Ohaji/egbema (mmahu-egbema),5.5214533,6.9209135
-IM,Imo,Okigwe  (okigwe),5.5214533,6.9209135
+IM,Imo,Okigwe (okigwe),5.5214533,6.9209135
 IM,Imo,Onuimo (okwe),5.5214533,6.9209135
 IM,Imo,Orlu,5.5214533,6.9209135
 IM,Imo,Orsu (awo Idemili),5.5214533,6.9209135
