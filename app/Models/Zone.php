@@ -4,14 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class GeopoliticalZone extends Model
+class Zone extends Model
 {
     /**
      * The table associated with the model
      *
      * @var string
      */
-    protected $table = 'gp_zones';
+    protected $table = 'zones';
 
     /**
      * The table default primary key

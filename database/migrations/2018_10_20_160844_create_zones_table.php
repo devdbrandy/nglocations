@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGeopoliticalZonesTable extends Migration
+class CreateZonesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateGeopoliticalZonesTable extends Migration
      */
     public function up()
     {
-        Schema::create('gp_zones', function (Blueprint $table) {
+        Schema::create('zones', function (Blueprint $table) {
             $table->string('code');
             $table->string('zone');
         });
@@ -26,6 +26,6 @@ class CreateGeopoliticalZonesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gp_zones');
+        Schema::dropIfExists('zones');
     }
 }
