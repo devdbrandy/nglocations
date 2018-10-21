@@ -74,4 +74,20 @@ class ApiTest extends TestCase
             ->assertStatus(200)
             ->assertExactJson(['Asaba']);
     }
+
+    /**
+     * @test
+     * Test retrieves all states with custom params
+     *
+     * @return void
+     */
+    public function get_all_states_with_custom_params()
+    {
+        $params = ['lgas', 'cities', 'total'];
+
+        foreach ($params as $param) {
+            $response = $this->get("/api/states?{$param}");
+            $response->assertStatus(200);
+        }
+    }
 }
