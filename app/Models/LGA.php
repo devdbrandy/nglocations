@@ -16,4 +16,18 @@ class LGA extends BaseModel
      * @var string
      */
     protected $table = 'lgas';
+
+    /**
+     * The table default primary key
+     *
+     * @var string
+     */
+    protected $primaryKey = 'alias';
+
+    /**
+     * Define the primary key type
+     *
+     * @var string
+     */
+    protected $keyType = 'string';
 }
