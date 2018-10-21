@@ -1,0 +1,545 @@
+CODE,STATE,CITY
+AB,Abia,Aba
+AB,Abia,Ohafia
+AB,Abia,Abiriba
+AB,Abia,Aba South
+AB,Abia,Aba North
+AB,Abia,Arochukwu
+AB,Abia,Isuikwuato
+AB,Abia,Isala Ngwa North
+AB,Abia,Umuahia
+AB,Abia,Osisioma Ngwa
+AB,Abia,Obi Ngwa
+AB,Abia,Ukwa West
+AB,Abia,Bende
+AB,Abia,Ugwunagbo
+AB,Abia,Ikwuano
+AB,Abia,Alayi
+AB,Abia,Ubakala
+AB,Abia,Nsirimo
+AB,Abia,Ozu Abam
+AB,Abia,Umudike
+AB,Abia,Umukabia
+AB,Abia,Ihite
+AB,Abia,Akwete
+AB,Abia,Amuvi
+AB,Abia,Owerrinta
+AB,Abia,Okigwe
+AB,Abia,Azumini
+AD,Adamawa,Demsa
+AD,Adamawa,Fufore
+AD,Adamawa,Ganye
+AD,Adamawa,Girei
+AD,Adamawa,Gombe
+AD,Adamawa,Guyuk
+AD,Adamawa,Hong
+AD,Adamawa,Jada
+AD,Adamawa,Lamurde
+AD,Adamawa,Madagali
+AD,Adamawa,Maiga
+AD,Adamawa,Mayo-Belwa
+AD,Adamawa,Michika
+AD,Adamawa,Mubi North
+AD,Adamawa,Mubi South
+AD,Adamawa,Numan
+AD,Adamawa,Shelleng
+AD,Adamawa,Song
+AD,Adamawa,Toungo
+AD,Adamawa,Yola North
+AD,Adamawa,Yola South
+AK,Akwa Ibom,Uyo
+AK,Akwa Ibom,Eket
+AK,Akwa Ibom,Oruk Anam
+AK,Akwa Ibom,Uruan
+AK,Akwa Ibom,Ikot Ekpene
+AK,Akwa Ibom,Itu
+AK,Akwa Ibom,Mkpat-Enin
+AK,Akwa Ibom,Udung-Uko
+AK,Akwa Ibom,Oron
+AK,Akwa Ibom,Ibeno
+AK,Akwa Ibom,Etinan
+AK,Akwa Ibom,Abak
+AK,Akwa Ibom,Ikot-Abasi
+AK,Akwa Ibom,Ibiono-Ibom
+AK,Akwa Ibom,Ukanafun
+AK,Akwa Ibom,Urue-Offong/Oruko
+AK,Akwa Ibom,Obot-Akara
+AK,Akwa Ibom,Okobo
+AK,Akwa Ibom,Onna
+AK,Akwa Ibom,Ikono
+AK,Akwa Ibom,Nsit-Atai
+AK,Akwa Ibom,Etim Ekpo
+AK,Akwa Ibom,Nsit-Ibom
+AK,Akwa Ibom,Esit Eket
+AK,Akwa Ibom,Eastern Obolo
+AK,Akwa Ibom,Essien Udim
+AK,Akwa Ibom,Nsit-Ubium
+AK,Akwa Ibom,Mbo
+AK,Akwa Ibom,Ini
+AK,Akwa Ibom,Ika
+AK,Akwa Ibom,Ikot Afaha
+AK,Akwa Ibom,Idu
+AK,Akwa Ibom,Ikot Udo Abia
+AK,Akwa Ibom,Ikot Ukpong
+AK,Akwa Ibom,Arochuckwu
+AK,Akwa Ibom,Ikot Okoro
+AK,Akwa Ibom,Ekpene Ukim
+AK,Akwa Ibom,Ikot Ibritam
+AK,Akwa Ibom,Eman Ikot Ebo
+AN,Anambra,Onitsha
+AN,Anambra,Awka
+AN,Anambra,Nnewi
+AN,Anambra,Enugu Ukwu
+AN,Anambra,Ihiala
+AN,Anambra,Abagana
+AN,Anambra,Anambra East
+AN,Anambra,Amawbia
+AN,Anambra,Agulu
+AN,Anambra,Obosi
+AN,Anambra,Atani
+AN,Anambra,Ekwulobia
+AN,Anambra,Awka-Etiti
+AN,Anambra,Igbo-Ukwu
+AN,Anambra,Ozubulu
+AN,Anambra,Orumba North
+AN,Anambra,Aguleri
+AN,Anambra,Alor
+AN,Anambra,Ogidi
+AN,Anambra,Nsugbe
+AN,Anambra,Oba
+AN,Anambra,Ayamelum
+AN,Anambra,Umudioka
+AN,Anambra,Umuchu
+AN,Anambra,Ogbaru
+AN,Anambra,Okija
+AN,Anambra,Anambra West
+AN,Anambra,Umuleri
+AN,Anambra,Idemili North
+AN,Anambra,Aguata
+AN,Anambra,Nkpor
+AN,Anambra,Nibo
+AN,Anambra,Nzam
+AN,Anambra,Adazi-Nnukwu
+AN,Anambra,Umunya
+AN,Anambra,Awkuzu
+AN,Anambra,Awka South
+AN,Anambra,Uga
+AN,Anambra,Anaocha
+AN,Anambra,Ekwusigo
+AN,Anambra,Onitsha North
+AN,Anambra,Dunukofia
+AN,Anambra,Umunze
+AN,Anambra,Nnewi South
+AN,Anambra,Achina
+AN,Anambra,Ogbunike
+AN,Anambra,Abatete
+AN,Anambra,Oraukwu
+AN,Anambra,Ezira
+AN,Anambra,Otuocha
+AN,Anambra,Awka North
+BA,Bauchi,Bauchi
+BA,Bauchi,Misau
+BA,Bauchi,Jama'are
+BA,Bauchi,Alkaleri
+BA,Bauchi,Ningi
+BA,Bauchi,Katagum
+BA,Bauchi,Kirfi
+BA,Bauchi,Bogoro
+BA,Bauchi,Ganjuwa
+BA,Bauchi,Darazo
+BA,Bauchi,Tafawa Balewa
+BA,Bauchi,Giade
+BA,Bauchi,Itas/Gadau
+BA,Bauchi,Damban
+BA,Bauchi,Warji
+BA,Bauchi,Gamawa
+BA,Bauchi,Azare
+BA,Bauchi,Toro
+BA,Bauchi,Dass
+BA,Bauchi,Zaki
+BA,Bauchi,Disina
+BA,Bauchi,Zadawa
+BY,Bayelsa,Ogbia
+BY,Bayelsa,Nembe
+BY,Bayelsa,Kolokuma/Opokuma
+BY,Bayelsa,Sagbama
+BY,Bayelsa,Southern Ijaw
+BY,Bayelsa,Ekeremor
+BY,Bayelsa,Oloibiri
+BY,Bayelsa,Twon-Brass
+BY,Bayelsa,Kaiama
+BY,Bayelsa,Brass Island
+BY,Bayelsa,Bomadi
+BN,Benue,Makurdi
+BN,Benue,Gboko
+BN,Benue,Otukpo
+BN,Benue,Vandeikya
+BN,Benue,Oju
+BN,Benue,Okpokwu
+BN,Benue,Katsina-Ala
+BN,Benue,Kwande
+BN,Benue,Ohimini
+BN,Benue,Buruku
+BN,Benue,Tarka
+BN,Benue,Agatu
+BN,Benue,Ukum
+BN,Benue,Konshisha
+BN,Benue,Ogbadibo
+BN,Benue,Gwer West
+BN,Benue,Gwer East
+BN,Benue,Logo
+BN,Benue,Guma
+BN,Benue,Igumale
+BO,Borno,Maiduguri
+BO,Borno,Monguno
+BO,Borno,Biu
+BO,Borno,Ngala
+BO,Borno,Dikwa
+BO,Borno,Magumeri
+BO,Borno,Kukawa
+BO,Borno,Mafa
+BO,Borno,Nganzai
+BO,Borno,Shani
+BO,Borno,Bama
+BO,Borno,Konduga
+BO,Borno,Damboa
+BO,Borno,Chibok
+BO,Borno,Gwoza
+BO,Borno,Abadam
+BO,Borno,Mobbar
+BO,Borno,Marte
+BO,Borno,Guzamala
+BO,Borno,Kala/Balge
+BO,Borno,Gubio
+BO,Borno,Askira
+BO,Borno,Hawul
+BO,Borno,Gamboru
+BO,Borno,Kaga
+BO,Borno,Bayo
+BO,Borno,Damasak
+BO,Borno,Cross Kauwa
+BO,Borno,Baga
+BO,Borno,Rann
+BO,Borno,Lassa
+BO,Borno,Dalori
+CR,Cross River,Calabar
+CR,Cross River,Ogoja
+CR,Cross River,Obudu
+CR,Cross River,Ikom
+CR,Cross River,Odukpani
+CR,Cross River,Akamkpa
+CR,Cross River,Obubra
+CR,Cross River,Obanliku
+CR,Cross River,Biase
+CR,Cross River,Akpabuyo
+CR,Cross River,Ugep
+CR,Cross River,Calabar South
+CR,Cross River,Boki
+CR,Cross River,Yala
+CR,Cross River,Etung
+CR,Cross River,Bekwarra
+CR,Cross River,Creek Town
+CR,Cross River,Uyo
+CR,Cross River,Asaba
+CR,Cross River,Okuku
+DT,Delta,Warri
+DT,Delta,Ughelli
+DT,Delta,Asaba
+DT,Delta,Sapele
+DT,Delta,Burutu
+DT,Delta,Patani
+DT,Delta,Bomadi
+DT,Delta,Abraka
+DT,Delta,Agbor
+DT,Delta,Effurun
+DT,Delta,Oshimili South
+DT,Delta,Oshimili North
+DT,Delta,Isoko North
+DT,Delta,Isoko South
+DT,Delta,Ozoro
+DT,Delta,Uvwie
+DT,Delta,Warri North
+DT,Delta,Warri South-West
+DT,Delta,Aniocha South
+DT,Delta,Aniocha North
+DT,Delta,Ogwashi Ukwu
+DT,Delta,Ika North-East
+DT,Delta,Ika South
+DT,Delta,Koko
+DT,Delta,Orerokpe
+DT,Delta,Forcados
+DT,Delta,Ovwian
+DT,Delta,Orhuwhorun
+DT,Delta,Aboh
+DT,Delta,Emevor
+DT,Delta,Illah
+DT,Delta,Agbarho
+DT,Delta,Eku
+DT,Delta,Obiaruku
+DT,Delta,Osubi
+DT,Delta,Ubulu
+DT,Delta,Aviara
+DT,Delta,Igbuku
+DT,Delta,Evwreni
+DT,Delta,Emede
+DT,Delta,Oyede
+DT,Delta,Egini
+DT,Delta,Okwagbe
+DT,Delta,Idheze
+DT,Delta,Onicha-Ugbo
+DT,Delta,Ofagbe
+DT,Delta,Aradhe
+DT,Delta,Obomkpa
+DT,Delta,Idumuje-Unor
+DT,Delta,Issele Ukwu
+DT,Delta,Igbodo
+EB,Ebonyi,Abakaliki
+EB,Ebonyi,Ehugbo
+EB,Ebonyi,Onicha
+EB,Ebonyi,Afikpo South
+EB,Ebonyi,Afikpo North
+EB,Ebonyi,Ishiagu
+EB,Ebonyi,Ishielu
+EB,Ebonyi,Ezza South
+EB,Ebonyi,Onueke
+EB,Ebonyi,Ohaozara
+EB,Ebonyi,Unwana
+EB,Ebonyi,Isieke
+EB,Ebonyi,Ivo
+EB,Ebonyi,Nkalagu
+ED,Edo,Benin City
+ED,Edo,Oredo
+ED,Edo,Ovia South-West
+ED,Edo,Uhunmwonde
+ED,Edo,Esan South-East
+ED,Edo,Esan North-East
+ED,Edo,Esan Central
+ED,Edo,Esan West
+ED,Edo,Etsako East
+ED,Edo,Etsako Central
+ED,Edo,Egor
+ED,Edo,Atoko Edo
+ED,Edo,Agenebode
+ED,Edo,Owan East
+ED,Edo,Owan West
+ED,Edo,Uromi
+ED,Edo,Etsako West
+ED,Edo,Okpekpe
+ED,Edo,Auchi
+ED,Edo,Orhionmwon
+ED,Edo,Ososo
+ED,Edo,Igbanke
+ED,Edo,Uzebba
+ED,Edo,Obadan
+ED,Edo,Ogwa
+ED,Edo,Jattu
+ED,Edo,Ohordua
+ED,Edo,Iguododo
+EK,Ekiti,Ado-Ekiti
+EK,Ekiti,Ikere-Ekiti
+EK,Ekiti,Ikole
+EK,Ekiti,Ijero-Ekiti
+EK,Ekiti,Oye
+EK,Ekiti,Emure
+EK,Ekiti,Omuo
+EK,Ekiti,Effon-Alaiye
+EK,Ekiti,Ise/Orun
+EK,Ekiti,Ilawe-Ekiti
+EK,Ekiti,Ilejemeje
+EK,Ekiti,Ise-Ekiti
+EK,Ekiti,Ekiti East
+EK,Ekiti,Oke-Mesi
+EK,Ekiti,Moba
+EK,Ekiti,Ire-Ekiti
+EK,Ekiti,Ikoro
+EK,Ekiti,Imesi
+EN,Enugu,Enugu
+EN,Enugu,Nsukka
+EN,Enugu,Udi
+EN,Enugu,Oji
+EN,Enugu,Awgu
+EN,Enugu,Ezeagu
+EN,Enugu,Aninri
+EN,Enugu,Uzo Uwani
+EN,Enugu,Udenu
+EN,Enugu,Enugu North
+EN,Enugu,Enugu South
+EN,Enugu,Enugu East
+EN,Enugu,Nkanu West
+EN,Enugu,Isi Uzo
+EN,Enugu,Eha Amufu
+EN,Enugu,Igbo Eze North
+EN,Enugu,Igbo Eze South
+EN,Enugu,Achi
+EN,Enugu,Ngwo
+EN,Enugu,Abor
+EN,Enugu,Igbo Etiti
+EN,Enugu,Ohum
+EN,Enugu,Inyo
+EN,Enugu,Ugbo
+EN,Enugu,Mmaku
+EN,Enugu,Okpogho
+EN,Enugu,Enugu-Ezike
+EN,Enugu,Umulokpa
+FC,FCT,Abaji
+FC,FCT,Amac
+FC,FCT,Bwari
+FC,FCT,Gwagwalada
+FC,FCT,Karshi
+FC,FCT,Kuje
+FC,FCT,Kwali
+FC,FCT,Gwarinpa
+FC,FCT,Garki
+FC,FCT,Wuse
+FC,FCT,Jabi
+FC,FCT,Asokoro
+FC,FCT,Maitama
+FC,FCT,Guzape
+FC,FCT,Gudu
+FC,FCT,Durumi
+FC,FCT,Utako
+FC,FCT,Wuye
+FC,FCT,Kado
+FC,FCT,Mabuchi
+FC,FCT,Katampe
+FC,FCT,Jahi
+FC,FCT,Dakibiya
+FC,FCT,Kaura
+FC,FCT,Duboyi
+FC,FCT,Gaduwa
+FC,FCT,Dutse
+FC,FCT,Karsana
+FC,FCT,Sabo Gida
+FC,FCT,Idu
+FC,FCT,Idogwari
+FC,FCT,Gwagwa
+FC,FCT,Kaba
+FC,FCT,Kajini
+FC,FCT,Ketti
+FC,FCT,Shertti Cheche
+FC,FCT,Waru-Pouma
+FC,FCT,Gwari
+FC,FCT,Bude
+FC,FCT,Chafe
+FC,FCT,Jaite
+FC,FCT,Mamusa
+FC,FCT,Burun
+FC,FCT,Purfun
+FC,FCT,Kubwa
+FC,FCT,Nyanya
+FC,FCT,Karu
+FC,FCT,Jukoyi
+FC,FCT,Lugbe
+FC,FCT,Chika
+FC,FCT,Kuchigworo
+FC,FCT,Mpapa
+FC,FCT,Dei-Dei
+GM,Gombe,Gombe
+GM,Gombe,Billiri
+GM,Gombe,Dukku
+GM,Gombe,Kaitungo
+GM,Gombe,Bajoga
+GM,Gombe,Kwami
+GM,Gombe,Yamaltu/Deba
+GM,Gombe,Akko
+GM,Gombe,Balanga
+GM,Gombe,Funakaye
+GM,Gombe,Nafada
+GM,Gombe,Kumo
+GM,Gombe,Deba Habe
+IM,Imo,Owerri
+IM,Imo,Okigwe
+IM,Imo,Oguta
+IM,Imo,Nkwerre
+IM,Imo,Orlu
+IM,Imo,Isiala Mbano
+IM,Imo,Obowo
+IM,Imo,Ihitte/Uboma
+IM,Imo,Ohaji/Egbema
+IM,Imo,Isu
+IM,Imo,Aboh
+IM,Imo,Ezinihitte-Mbaise
+IM,Imo,Ehime Mbano
+IM,Imo,Ahiazu Mbaise
+IM,Imo,Nwangele
+IM,Imo,Orji
+IM,Imo,Amafor
+IM,Imo,Izombe
+IM,Imo,Emekuku
+IM,Imo,Ihite
+IM,Imo,Ihiagwa
+IM,Imo,Oru West
+IM,Imo,Umuaka
+IM,Imo,Ahiara
+IM,Imo,Ideato South
+IM,Imo,Ozara
+IM,Imo,Owerri West
+IM,Imo,Amaimo
+IM,Imo,Mbaitoli
+IM,Imo,Orodo
+IM,Imo,Nekede
+IM,Imo,Umuagwo
+IM,Imo,Amatta
+IM,Imo,Oru East
+IM,Imo,Awo-Omamma
+IM,Imo,Naze
+IM,Imo,Akabo
+IM,Imo,Onuimo
+IM,Imo,Egbu
+IM,Imo,Obinze
+IM,Imo,Awaka
+IM,Imo,Emii
+IM,Imo,Umunoha
+IM,Imo,Ubomiri
+IM,Imo,Ngugu
+IM,Imo,Amakohia
+IM,Imo,Orogwe
+IM,Imo,Obaku
+IM,Imo,Ohoba
+IM,Imo,Ochicha
+IM,Imo,Nnarambia
+JG,Jigawa,Dutse
+JG,Jigawa,Gumel
+JG,Jigawa,Hadejia
+JG,Jigawa,Kazaure
+JG,Jigawa,Birnin Kudu
+JG,Jigawa,Yankwashi
+JG,Jigawa,Maigatari
+JG,Jigawa,Sule Tankarkar
+JG,Jigawa,Gwaram
+JG,Jigawa,Kaugama
+JG,Jigawa,Garki
+JG,Jigawa,Kiyawa
+JG,Jigawa,Gagarawa
+JG,Jigawa,Gwiwa
+JG,Jigawa,Buji
+JG,Jigawa,Auyo
+JG,Jigawa,Jahun
+JG,Jigawa,Biriniwa
+JG,Jigawa,Babura
+JG,Jigawa,Malam Madori
+JG,Jigawa,Miga
+JG,Jigawa,Kiri
+JG,Jigawa,Roni
+JG,Jigawa,Guri
+KD,Kaduna,Kaduna
+KD,Kaduna,Kachia
+KD,Kaduna,Zaria
+KD,Kaduna,Kaduna South
+KD,Kaduna,Kaura
+KD,Kaduna,Birnia Gwari
+KD,Kaduna,Kafanchan
+KD,Kaduna,Lere
+KD,Kaduna,Soba
+KD,Kaduna,Jema'a
+KD,Kaduna,Igabi
+KD,Kaduna,Ikara
+KD,Kaduna,Sanga
+KD,Kaduna,Giwa
+KD,Kaduna,Kagoro
+KD,Kaduna,Kagarko
+KD,Kaduna,Chikun
+KD,Kaduna,Nok
+KD,Kaduna,Jaba
+KD,Kaduna,Kajuru
+KD,Kaduna,Jaji
