@@ -20,6 +20,8 @@ class CreateStatesTable extends Migration
             $table->string('capital');
             $table->string('alias');
             $table->string('gp_zone');
+            $table->string('lat');
+            $table->string('lon');
         });
     }
 
