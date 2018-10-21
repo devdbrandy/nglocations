@@ -11,6 +11,20 @@ class BaseModel extends Model
     use HasSlug;
 
     /**
+     * The table default primary key
+     *
+     * @var string
+     */
+    protected $primaryKey = 'alias';
+
+    /**
+     * Define the primary key type
+     *
+     * @var string
+     */
+    protected $keyType = 'string';
+
+    /**
      * Indicates if the model should be timestamped
      *
      * @var boolean
