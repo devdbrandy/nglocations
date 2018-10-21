@@ -31,11 +31,7 @@ class ApiTest extends TestCase
     {
         $state = 'lagos';
         $response = $this->get("/api/states/{$state}");
-        $response
-            ->assertStatus(200)
-            ->assertJson([
-                'code' => 'LA'
-            ]);
+        $response->assertStatus(200);
     }
 
     /**
@@ -62,5 +58,20 @@ class ApiTest extends TestCase
         $state = 'delta';
         $response = $this->get("/api/states/{$state}/lgas");
         $response->assertStatus(200)->assertJsonStructure(['data']);
+    }
+
+    /**
+     * @test
+     * Test retrieves state capital
+     *
+     * @return void
+     */
+    public function get_state_capital()
+    {
+        $state = 'delta';
+        $response = $this->get("/api/states/{$state}?capital");
+        $response
+            ->assertStatus(200)
+            ->assertExactJson(['Asaba']);
     }
 }

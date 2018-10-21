@@ -24,11 +24,16 @@ class ApiController extends Controller
     /**
      * Display the specified resource.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\State  $state
      * @return \Illuminate\Http\Response
      */
-    public function state(State $state)
+    public function state(Request $request, State $state)
     {
+        if ($request->has('capital')) {
+            return response()->json($state->capital);
+        }
+
         return new StateResource($state);
     }
 
