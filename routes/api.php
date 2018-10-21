@@ -16,3 +16,10 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group(['prefix' => 'states'], function () {
+    Route::get('/', 'ApiController@index');
+    Route::get('/{state}', 'ApiController@state');
+    Route::get('/{state}/cities', 'ApiController@cities');
+    Route::get('/{state}/lgas', 'ApiController@lgas');
+});
