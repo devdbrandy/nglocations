@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\State;
 use Illuminate\Http\Request;
+use App\Http\Resources\LgaResource;
+use App\Http\Resources\CityResource;
+use App\Http\Resources\StateResource;
 use Symfony\Component\HttpFoundation\Response;
 
 class ApiController extends Controller
@@ -15,10 +18,7 @@ class ApiController extends Controller
      */
     public function index()
     {
-        $states = State::all();
-        return response()
-            ->json(['data' => $states])
-            ->setStatusCode(Response::HTTP_OK);
+        return StateResource::collection(State::all());
     }
 
     /**
@@ -29,9 +29,7 @@ class ApiController extends Controller
      */
     public function state(State $state)
     {
-        return response()
-            ->json($state)
-            ->setStatusCode(Response::HTTP_OK);
+        return new StateResource($state);
     }
 
     /**
@@ -42,10 +40,7 @@ class ApiController extends Controller
      */
     public function lgas(State $state)
     {
-        $lgas = $state->lgas;
-        return response()
-            ->json(['data' => $lgas])
-            ->setStatusCode(Response::HTTP_OK);
+        return LgaResource::collection($state->lgas);
     }
 
     /**
@@ -56,9 +51,6 @@ class ApiController extends Controller
      */
     public function cities(State $state)
     {
-        $cities = $state->cities;
-        return response()
-            ->json(['data' => $cities])
-            ->setStatusCode(Response::HTTP_OK);
+        return CityResource::collection($state->cities);
     }
 }
