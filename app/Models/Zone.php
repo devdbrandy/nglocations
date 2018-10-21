@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\State;
 use Illuminate\Database\Eloquent\Model;
 
 class Zone extends Model
@@ -33,4 +34,12 @@ class Zone extends Model
      * @var boolean
      */
     public $timestamps = false;
+
+    /**
+     * Get the cities for the state.
+     */
+    public function states()
+    {
+        return $this->hasMany(State::class, 'zone_code', 'code');
+    }
 }

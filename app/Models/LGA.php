@@ -12,4 +12,12 @@ class LGA extends BaseModel
      * @var string
      */
     protected $table = 'lgas';
+
+    /**
+     * Get the state that owns the lga.
+     */
+    public function state()
+    {
+        return $this->belongsTo(State::class, 'state_id', 'id');
+    }
 }
