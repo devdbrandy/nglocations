@@ -29,10 +29,10 @@ class CsvDataSeeder extends Seeder
         $csv->setHeaderOffset(0);
 
         foreach ($csv as $record) {
-            $gpZone = new Zone;
-            $gpZone->code = $record['CODE'];
-            $gpZone->zone = $record['GP-ZONE'];
-            $gpZone->save();
+            $zone = new Zone;
+            $zone->code = $record['CODE'];
+            $zone->name = $record['GP-ZONE'];
+            $zone->save();
         }
     }
 
@@ -48,14 +48,14 @@ class CsvDataSeeder extends Seeder
         foreach ($csv2 as $key => $record) {
             $csv1->setHeaderOffset($key);
 
-            $gpZone = new State;
-            $gpZone->code = $record['CODE'];
-            $gpZone->name = $record['STATE'];
-            $gpZone->capital = $record['CAP'];
-            $gpZone->zone_code = $csv1->getHeader()[2];
-            $gpZone->lat = $record['LAT'];
-            $gpZone->lon = $record['LON'];
-            $gpZone->save();
+            $state = new State;
+            $state->code = $record['CODE'];
+            $state->name = $record['STATE'];
+            $state->capital = $record['CAP'];
+            $state->zone_code = $csv1->getHeader()[2];
+            $state->lat = $record['LAT'];
+            $state->lon = $record['LON'];
+            $state->save();
         }
     }
 
