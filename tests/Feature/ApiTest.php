@@ -11,7 +11,7 @@ class ApiTest extends TestCase
 
     /**
      * @test
-     * Test retrieves all states
+     * Test retrieves all states.
      *
      * @return void
      */
@@ -23,7 +23,7 @@ class ApiTest extends TestCase
 
     /**
      * @test
-     * Test retrieves a single state details
+     * Test retrieves a single state details.
      *
      * @return void
      */
@@ -40,13 +40,13 @@ class ApiTest extends TestCase
                 'alias',
                 'zone',
                 'latitude',
-                'longitude'
+                'longitude',
             ]);
     }
 
     /**
      * @test
-     * Test retrieves cities in a given state
+     * Test retrieves cities in a given state.
      *
      * @return void
      */
@@ -59,7 +59,7 @@ class ApiTest extends TestCase
 
     /**
      * @test
-     * Test retrieves all local government areas in a given state
+     * Test retrieves all local government areas in a given state.
      *
      * @return void
      */
@@ -72,7 +72,7 @@ class ApiTest extends TestCase
 
     /**
      * @test
-     * Test retrieves state capital
+     * Test retrieves state capital.
      *
      * @return void
      */
@@ -87,7 +87,7 @@ class ApiTest extends TestCase
 
     /**
      * @test
-     * Test retrieves all states with custom params
+     * Test retrieves all states with custom params.
      *
      * @return void
      */
@@ -103,7 +103,7 @@ class ApiTest extends TestCase
 
     /**
      * @test
-     * Test retrieves all local government areas
+     * Test retrieves all local government areas.
      *
      * @return void
      */
@@ -115,7 +115,7 @@ class ApiTest extends TestCase
 
     /**
      * @test
-     * Test retrieves local government area details
+     * Test retrieves local government area details.
      *
      * @return void
      */
@@ -129,13 +129,13 @@ class ApiTest extends TestCase
                 'name',
                 'alias',
                 'latitude',
-                'longitude'
+                'longitude',
             ]);
     }
 
     /**
      * @test
-     * Test retrieves local government area details with custom state param
+     * Test retrieves local government area details with custom state param.
      *
      * @return void
      */

@@ -20,8 +20,8 @@ class LgaCollection extends JsonResource
             'lga' => [
                 'name' => $this->name,
                 'alias' => $this->alias,
-                'href' => route('api.lgas.show', $this->alias)
-            ]
+                'href' => route('api.lgas.show', $this->alias),
+            ],
         ];
     }
 }

@@ -10,7 +10,7 @@ class LGA extends BaseModel
     use StateTrait;
 
     /**
-     * The table associated with the model
+     * The table associated with the model.
      *
      * @var string
      */

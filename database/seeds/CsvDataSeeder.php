@@ -22,6 +22,11 @@ class CsvDataSeeder extends Seeder
         $this->cities();
     }
 
+    /**
+     * Seed zones from csv file
+     *
+     * @return void
+     */
     public function zones()
     {
         $file = database_path('csv/gp_zones.csv');
@@ -36,6 +41,11 @@ class CsvDataSeeder extends Seeder
         }
     }
 
+    /**
+     * Seed states from csv file
+     *
+     * @return void
+     */
     public function states()
     {
         $file1 = database_path('csv/states.csv');
@@ -59,6 +69,11 @@ class CsvDataSeeder extends Seeder
         }
     }
 
+    /**
+     * Seed local government from csv file
+     *
+     * @return void
+     */
     public function lgas()
     {
         $file = database_path('csv/lgas.csv');
@@ -75,6 +90,11 @@ class CsvDataSeeder extends Seeder
         }
     }
 
+    /**
+     * Seed cities from csv file
+     *
+     * @return void
+     */
     public function cities()
     {
         $file = database_path('csv/cities.csv');

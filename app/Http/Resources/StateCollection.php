@@ -26,9 +26,9 @@ class StateCollection extends JsonResource
             $this->mergeWhen($request->has('total'), [
                 'total' => [
                     'lgas' => $this->lgas->count(),
-                    'cities' => $this->cities->count()
-                ]
-            ])
+                    'cities' => $this->cities->count(),
+                ],
+            ]),
         ];
     }
 }

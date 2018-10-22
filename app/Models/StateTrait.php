@@ -3,12 +3,12 @@
 namespace App\Models;
 
 /**
- * Helper function for eager loading state resources
+ * Helper function for eager loading state resources.
  */
 trait StateTrait
 {
     /**
-     * Get the name of the state that owns the lga
+     * Get the name of the state that owns the lga.
      *
      * @return void
      */
@@ -18,7 +18,7 @@ trait StateTrait
     }
 
     /**
-     * Get the alias of the state that owns the lga
+     * Get the alias of the state that owns the lga.
      *
      * @return void
      */

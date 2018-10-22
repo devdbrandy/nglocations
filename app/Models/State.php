@@ -34,7 +34,7 @@ class State extends BaseModel
     }
 
     /**
-     * Get the name of the zone that owns the state
+     * Get the name of the zone that owns the state.
      *
      * @return void
      */

@@ -2,7 +2,6 @@
 
 namespace App\Http\Resources;
 
-use App\Http\Resources\CityResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class StateResource extends JsonResource
@@ -22,7 +21,7 @@ class StateResource extends JsonResource
             'alias' => $this->alias,
             'zone' => $this->getZone(),
             'latitude' => $this->lat,
-            'longitude' => $this->lon
+            'longitude' => $this->lon,
         ];
     }
 }
