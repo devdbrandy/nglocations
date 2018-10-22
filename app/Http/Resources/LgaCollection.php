@@ -16,11 +16,11 @@ class LgaCollection extends JsonResource
     {
         return [
             'state' => $this->state->name,
-            'alias' => $this->state->alais,
+            'alias' => $this->state->alias,
             'lga' => [
                 'name' => $this->name,
                 'alias' => $this->alias,
-                'href' => ''
+                'href' => route('api.lgas.show', $this->alias)
             ]
         ];
     }
