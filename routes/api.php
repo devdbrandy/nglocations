@@ -25,9 +25,6 @@ Route::group(['prefix' => 'states'], function () {
     Route::get('/{state}/lgas', 'ApiController@lgas');
 });
 
-// cities endpoints
-Route::get('cities', 'ApiController@allCities');
-
 // lgas endpoints
 Route::get('lgas', 'ApiController@localGovAreas');
 Route::get('lgas/{lga}', 'ApiController@showLga')->name('api.lgas.show');

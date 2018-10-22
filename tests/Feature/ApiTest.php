@@ -103,18 +103,6 @@ class ApiTest extends TestCase
 
     /**
      * @test
-     * Test retrieves all cities
-     *
-     * @return void
-     */
-    public function get_all_cities()
-    {
-        $response = $this->get('/api/cities');
-        $response->assertStatus(200);
-    }
-
-    /**
-     * @test
      * Test retrieves all local government areas
      *
      * @return void

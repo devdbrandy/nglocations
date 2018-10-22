@@ -69,16 +69,6 @@ class ApiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function allCities()
-    {
-        return CityCollection::collection(City::all());
-    }
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function localGovAreas()
     {
         return LgaCollection::collection(LGA::all());
