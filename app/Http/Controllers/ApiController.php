@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\City;
 use App\Models\State;
 use Illuminate\Http\Request;
 use App\Http\Resources\LgaResource;
 use App\Http\Resources\CityResource;
 use App\Http\Resources\StateResource;
+use App\Http\Resources\CityCollection;
 use App\Http\Resources\StateCollection;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -58,5 +60,15 @@ class ApiController extends Controller
     public function cities(State $state)
     {
         return CityResource::collection($state->cities);
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function allCities()
+    {
+        return CityCollection::collection(City::all());
     }
 }

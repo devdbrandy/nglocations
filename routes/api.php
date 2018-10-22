@@ -23,3 +23,5 @@ Route::group(['prefix' => 'states'], function () {
     Route::get('/{state}/cities', 'ApiController@cities');
     Route::get('/{state}/lgas', 'ApiController@lgas');
 });
+
+Route::get('cities', 'ApiController@allCities');
