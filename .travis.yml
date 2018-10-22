@@ -7,15 +7,15 @@ cache:
     - $HOME/.composer/cache
 
 php:
-  - 7.0.0
   - 7.1.3
   - 7.2
 
 env:
   global:
-  - DB_CONNECTION=pgsql
-  - DB_DATABASE=travis_ci_test
-  - DB_USERNAME=postgres
+    - APP_ENV=test
+    - DB_CONNECTION=pgsql
+    - DB_DATABASE=travis_ci_test
+    - DB_USERNAME=postgres
 
 services:
   - postgresql
@@ -24,7 +24,7 @@ install:
   - travis_retry composer self-update && composer --version
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
   - mkdir -p ./bootstrap/cache
-  - travis_retry composer install --prefer-dist --no-interaction
+  - composer install --prefer-dist --no-interaction
 
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
