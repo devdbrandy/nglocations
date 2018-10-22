@@ -22,15 +22,7 @@ class StateResource extends JsonResource
             'alias' => $this->alias,
             'zone' => $this->zone->zone,
             'latitude' => $this->lat,
-            'longitude' => $this->lon,
-            'lgas' => $this->when($request->has('lgas'), CityResource::collection($this->lgas)),
-            'cities' => $this->when($request->has('cities'), CityResource::collection($this->cities)),
-            $this->mergeWhen($request->has('total'), [
-                'total' => [
-                    'lgas' => $this->lgas->count(),
-                    'cities' => $this->cities->count()
-                ]
-            ])
+            'longitude' => $this->lon
         ];
     }
 }
