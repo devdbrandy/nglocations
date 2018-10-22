@@ -1,7 +1,7 @@
-<h1 align="center">NgLocal</h1>
+<h1 align="center">NgLocations</h1>
 
 ## 1. Overview
-The NgLocal is an Open Source REST API that allows users to retrieve information of all states and geopolitical zones in Nigeria.
+The NgLocations is an Open Source REST API that allows users to retrieve information of all states and geopolitical zones in Nigeria.
 
 ## 2. Table of Contents
 
