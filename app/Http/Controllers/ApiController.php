@@ -3,14 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\LGA;
-use App\Models\City;
 use App\Models\State;
 use Illuminate\Http\Request;
 use App\Http\Resources\LgaResource;
 use App\Http\Resources\CityResource;
 use App\Http\Resources\LgaCollection;
 use App\Http\Resources\StateResource;
-use App\Http\Resources\CityCollection;
 use App\Http\Resources\StateCollection;
 use Symfony\Component\HttpFoundation\Response;
 

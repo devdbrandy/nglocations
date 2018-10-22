@@ -33,7 +33,7 @@ trait ExceptionTrait
      * Check for ModelNotFoundException.
      *
      * @param Exception $exception
-     * @return boolean
+     * @return bool
      */
     protected function isModelNotFound($exception)
     {
@@ -44,7 +44,7 @@ trait ExceptionTrait
      * Check for NotFoundHttpException.
      *
      * @param Exception $exception
-     * @return boolean
+     * @return bool
      */
     protected function isNotFoundHttp($exception)
     {

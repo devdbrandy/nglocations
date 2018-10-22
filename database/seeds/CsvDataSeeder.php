@@ -23,7 +23,7 @@ class CsvDataSeeder extends Seeder
     }
 
     /**
-     * Seed zones from csv file
+     * Seed zones from csv file.
      *
      * @return void
      */
@@ -42,7 +42,7 @@ class CsvDataSeeder extends Seeder
     }
 
     /**
-     * Seed states from csv file
+     * Seed states from csv file.
      *
      * @return void
      */
@@ -70,7 +70,7 @@ class CsvDataSeeder extends Seeder
     }
 
     /**
-     * Seed local government from csv file
+     * Seed local government from csv file.
      *
      * @return void
      */
@@ -91,7 +91,7 @@ class CsvDataSeeder extends Seeder
     }
 
     /**
-     * Seed cities from csv file
+     * Seed cities from csv file.
      *
      * @return void
      */

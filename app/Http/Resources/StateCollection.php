@@ -2,7 +2,6 @@
 
 namespace App\Http\Resources;
 
-use App\Http\Resources\CityResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class StateCollection extends JsonResource

@@ -2,9 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\State;
-use App\Models\BaseModel;
-
 class City extends BaseModel
 {
     /**

@@ -2,11 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\LGA;
-use App\Models\City;
-use App\Models\Zone;
-use App\Models\BaseModel;
-
 class State extends BaseModel
 {
     /**
