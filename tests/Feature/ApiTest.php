@@ -7,7 +7,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ApiTest extends TestCase
 {
-    const TOTAL_STATES = 37;
+    public $totalStates = 37;
 
     /**
      * @test
@@ -18,7 +18,7 @@ class ApiTest extends TestCase
     public function get_all_states()
     {
         $response = $this->get('/api/states');
-        $response->assertStatus(200)->assertJsonCount(self::TOTAL_STATES, 'data');
+        $response->assertStatus(200)->assertJsonCount($this->totalStates);
     }
 
     /**
@@ -31,7 +31,17 @@ class ApiTest extends TestCase
     {
         $state = 'lagos';
         $response = $this->get("/api/states/{$state}");
-        $response->assertStatus(200);
+        $response
+            ->assertStatus(200)
+            ->assertJsonStructure([
+                'code',
+                'name',
+                'capital',
+                'alias',
+                'zone',
+                'latitude',
+                'longitude'
+            ]);
     }
 
     /**
@@ -44,7 +54,7 @@ class ApiTest extends TestCase
     {
         $state = 'enugu';
         $response = $this->get("/api/states/{$state}/cities");
-        $response->assertStatus(200)->assertJsonStructure(['data']);
+        $response->assertStatus(200);
     }
 
     /**
@@ -57,7 +67,7 @@ class ApiTest extends TestCase
     {
         $state = 'delta';
         $response = $this->get("/api/states/{$state}/lgas");
-        $response->assertStatus(200)->assertJsonStructure(['data']);
+        $response->assertStatus(200);
     }
 
     /**
@@ -125,6 +135,28 @@ class ApiTest extends TestCase
     {
         $lga = 'aba-north';
         $response = $this->get("/api/lgas/{$lga}");
-        $response->assertStatus(200);
+        $response
+            ->assertStatus(200)
+            ->assertJsonStructure([
+                'name',
+                'alias',
+                'latitude',
+                'longitude'
+            ]);
+    }
+
+    /**
+     * @test
+     * Test retrieves local government area details with custom state param
+     *
+     * @return void
+     */
+    public function get_lga_details_with_custom_state_param()
+    {
+        $lga = 'aba-north';
+        $response = $this->get("/api/lgas/{$lga}?state");
+        $response
+            ->assertStatus(200)
+            ->assertJsonStructure(['state']);
     }
 }
