@@ -1,8 +1,11 @@
 <h1 align="center">NgLocations</h1>
 
 <p align="center">
-    <img src="https://github.styleci.io/repos/7548986/shield?branch=develop" alt="styleCI">
-    <img src="https://app.codeship.com/projects/07f963d0-b856-0136-e4a9-6ec9e9b18678/status?branch=develop" alt="codeship">
+    <a href="https://github.styleci.io/repos/153914406">
+        <img src="https://github.styleci.io/repos/153914406/shield?branch=develop" alt="StyleCI"></a>
+    <a href="https://app.codeship.com/projects/07f963d0-b856-0136-e4a9-6ec9e9b18678">
+        <img src="https://app.codeship.com/projects/07f963d0-b856-0136-e4a9-6ec9e9b18678/status?branch=develop" alt="Codeship">
+    </a>
 </p>
 
 ## 1. Overview
