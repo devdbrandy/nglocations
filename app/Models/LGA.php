@@ -3,9 +3,12 @@
 namespace App\Models;
 
 use App\Models\BaseModel;
+use App\Models\StateTrait;
 
 class LGA extends BaseModel
 {
+    use StateTrait;
+
     /**
      * The table associated with the model
      *

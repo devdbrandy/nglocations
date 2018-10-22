@@ -15,8 +15,8 @@ class LgaCollection extends JsonResource
     public function toArray($request)
     {
         return [
-            'state' => $this->state->name,
-            'alias' => $this->state->alias,
+            'state' => $this->getState(),
+            'alias' => $this->getStateAlias(),
             'lga' => [
                 'name' => $this->name,
                 'alias' => $this->alias,
