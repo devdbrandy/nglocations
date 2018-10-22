@@ -1,5 +1,10 @@
 <h1 align="center">NgLocations</h1>
 
+<p align="center">
+    <img src="https://github.styleci.io/repos/7548986/shield?branch=develop" alt="styleCI">
+    <img src="https://app.codeship.com/projects/07f963d0-b856-0136-e4a9-6ec9e9b18678/status?branch=develop" alt="codeship">
+</p>
+
 ## 1. Overview
 The NgLocations is an Open Source REST API that allows users to retrieve information of all states and geopolitical zones in Nigeria.
 
