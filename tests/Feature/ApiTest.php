@@ -83,7 +83,7 @@ class ApiTest extends TestCase
      */
     public function get_all_states_with_custom_params()
     {
-        $params = ['lgas', 'cities', 'total'];
+        $params = ['capital', 'lgas', 'cities', 'total'];
 
         foreach ($params as $param) {
             $response = $this->get("/api/states?{$param}");
@@ -100,6 +100,31 @@ class ApiTest extends TestCase
     public function get_all_cities()
     {
         $response = $this->get('/api/cities');
+        $response->assertStatus(200);
+    }
+
+    /**
+     * @test
+     * Test retrieves all local government areas
+     *
+     * @return void
+     */
+    public function get_all_lgas()
+    {
+        $response = $this->get('/api/lgas');
+        $response->assertStatus(200);
+    }
+
+    /**
+     * @test
+     * Test retrieves local government area details
+     *
+     * @return void
+     */
+    public function get_lga_details()
+    {
+        $lga = 'aba-north';
+        $response = $this->get("/api/lgas/{$lga}");
         $response->assertStatus(200);
     }
 }

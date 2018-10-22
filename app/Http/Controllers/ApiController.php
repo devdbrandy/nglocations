@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\LGA;
 use App\Models\City;
 use App\Models\State;
 use Illuminate\Http\Request;
 use App\Http\Resources\LgaResource;
 use App\Http\Resources\CityResource;
+use App\Http\Resources\LgaCollection;
 use App\Http\Resources\StateResource;
 use App\Http\Resources\CityCollection;
 use App\Http\Resources\StateCollection;
@@ -70,5 +72,27 @@ class ApiController extends Controller
     public function allCities()
     {
         return CityCollection::collection(City::all());
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function localGovAreas()
+    {
+        return LgaCollection::collection(LGA::all());
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\LGA  $state
+     * @return \Illuminate\Http\Response
+     */
+    public function showLga(Request $request, LGA $lga)
+    {
+        return new LgaResource($lga);
     }
 }

@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class LgaResource extends JsonResource
+class LgaCollection extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -15,11 +15,13 @@ class LgaResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'state' => $this->when($request->has('state'), $this->state->name),
-            'name' => $this->name,
-            'alias' => $this->alias,
-            'latitude' => $this->lat,
-            'longitude' => $this->lon,
+            'state' => $this->state->name,
+            'alias' => $this->state->alais,
+            'lga' => [
+                'name' => $this->name,
+                'alias' => $this->alias,
+                'href' => ''
+            ]
         ];
     }
 }
