@@ -32,4 +32,14 @@ class State extends BaseModel
     {
         return $this->hasMany(LGA::class, 'state_id', 'id');
     }
+
+    /**
+     * Get the name of the zone that owns the state
+     *
+     * @return void
+     */
+    public function getZone()
+    {
+        return $this->zone->name;
+    }
 }

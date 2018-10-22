@@ -20,7 +20,7 @@ class StateResource extends JsonResource
             'name' => $this->name,
             'capital' => $this->capital,
             'alias' => $this->alias,
-            'zone' => $this->zone->zone,
+            'zone' => $this->getZone(),
             'latitude' => $this->lat,
             'longitude' => $this->lon
         ];
