@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => 'states'], function () {
     Route::get('/', 'ApiController@index');
-    Route::get('/{state}', 'ApiController@state');
+    Route::get('/{state}', 'ApiController@state')->name('api.states.show');
     Route::get('/{state}/cities', 'ApiController@cities');
     Route::get('/{state}/lgas', 'ApiController@lgas');
 });

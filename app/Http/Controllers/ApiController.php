@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Resources\LgaResource;
 use App\Http\Resources\CityResource;
 use App\Http\Resources\StateResource;
+use App\Http\Resources\StateCollection;
 use Symfony\Component\HttpFoundation\Response;
 
 class ApiController extends Controller
@@ -18,7 +19,7 @@ class ApiController extends Controller
      */
     public function index()
     {
-        return StateResource::collection(State::all());
+        return StateCollection::collection(State::all());
     }
 
     /**
