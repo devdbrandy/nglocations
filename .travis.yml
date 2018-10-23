@@ -34,4 +34,4 @@ script:
   - composer test:coverage
 
 after_success:
-  - travis_retry php vendor/bin/php-coveralls
+  - php vendor/bin/php-coveralls -v
