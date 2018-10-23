@@ -26,7 +26,9 @@ The NgLocations is an Open Source REST API that allows users to retrieve informa
 - [3. Installation](#3-installation)
     - [3.1. Run locally](#31-run-locally)
     - [3.2. Deploy to heroku](#32-deploy-to-heroku)
-- [4. License](#4-license)
+- [4. API Endpoints](#4-api-endpoints)
+    - [4.1. Get all states](#41-get-all-states)
+- [5. License](#5-license)
 
 ## 3. Installation
 
@@ -53,7 +55,64 @@ Alternatively, you can deploy your own copy of the app using the web-based flow:
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-## 4. License
+## 4. API Endpoints
 
-The NgLocal REST API is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 4.1. Get all states
+
+Returns a json data of a list of states
+- **URL Endpoint:** `/api/states`
+- **Method:** `GET`
+- **URL Params:** `None`
+- **Data Param:** `None`
+- **Success Response**
+  - **Code:** `200`
+  - **Content:**
+  ```http
+    [
+        {
+            "code": "AB",
+            "name": "Abia",
+            "alias": "abia",
+            "href": "http://nglocations.me/api/states/abia"
+        }
+        ...
+    ]
+  ```
+- **Error Response**
+  - **Code:** `404 Not Found`
+  - **Content:**
+  
+  ```http
+    {"error": "Resource does not exist"}
+  ```
+- **Usage Sample:**
+
+```http
+GET https://nglocations.me/api/states
+HTTP/1.1
+Accept: application/json
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+    {
+        "code": "AB",
+        "name": "Abia",
+        "alias": "abia",
+        "href": "http://nglocations.me/api/states/abia"
+    },
+    {
+        "code": "AD",
+        "name": "Adamawa",
+        "alias": "adamawa",
+        "href": "http://nglocations.me/api/states/adamawa"
+    },
+    ...
+]
+```
+
+## 5. License
+
+The NgLocations REST API is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
