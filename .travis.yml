@@ -31,7 +31,7 @@ before_script:
 
 script:
   - mkdir -p tests/logs
-  - composer test
+  - composer test:coverage
 
 after_success:
   - travis_retry php vendor/bin/php-coveralls
