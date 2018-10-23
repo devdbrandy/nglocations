@@ -1,4 +1,4 @@
-<h1 align="center">NgLocations</h1>
+<h1 align="center">NGLocations</h1>
 
 <p align="center">
     <a href="https://github.styleci.io/repos/153914406">
@@ -17,7 +17,7 @@
 </p>
 
 ## 1. Overview
-The NgLocations is an Open Source REST API that allows users to retrieve information of all states and geopolitical zones in Nigeria. Informations include [states](#41-get-all-states), [cities](#), [local government areas](#), [geopolical zones](#) etc.
+The NGLocations is an Open Source REST API that allows users to retrieve information of all states and geopolitical zones in Nigeria. Informations include [states](#41-get-all-states), [cities](#43-list-cities-in-a-state), [local government areas](#44-list-local-governament-areas-in-a-state), [geopolical zones](#) etc.
 
 ## 2. Table of Contents
 
@@ -32,7 +32,9 @@ The NgLocations is an Open Source REST API that allows users to retrieve informa
     - [4.3. List cities in a state](#43-list-cities-in-a-state)
     - [4.4. List Local Governament Areas in a state](#44-list-local-governament-areas-in-a-state)
     - [4.4. Get list of Local Governament Areas](#44-get-list-of-local-governament-areas)
-    - [4.2. Get a single Local Government Area](#42-get-a-single-local-government-area)
+    - [4.4. Get a single Local Government Area](#44-get-a-single-local-government-area)
+- [5. Operations](#5-operations)
+    - [5.1. Custom Querystring Params](#51-custom-querystring-params)
 - [5. License](#5-license)
 
 ## 3. Installation
@@ -68,7 +70,7 @@ API endpoint that represents a list of states
 - **URL Endpoint:** `/api/states`
 - **Method:** `GET`
 - **URL Params:** `None`
-- **Data Param:** `None`
+- **Request Body:** `None`
 - **Success Response**
   - **Code:** `200`
   - **Content:**
@@ -120,15 +122,15 @@ API endpoint that represents a list of states
 ### 4.2. Get a single state
 
 API endpoint that represents a single state
-- **URL Endpoint:** `/api/states/:state_alias`
+- **URL Endpoint:** `/api/states/{state}`
 - **Method:** `GET`
 - **URL Params:** 
 
-    Attribute | Type | Description
+    Name | Type | Description
     ----------|------|------------
-    `alias` | `string` | **Required.** The state alias
+    `state` | `string` | **Required.** The state alias
 
-- **Data Param:** `None`
+- **Request Body:** `None`
 - **Success Response**
   - **Code:** `200`
   - **Content:**
@@ -174,15 +176,15 @@ API endpoint that represents a single state
 ### 4.3. List cities in a state
 
 API endpoint that represents a list of cities in a state
-- **URL Endpoint:** `/api/states/:state_alias/cities`
+- **URL Endpoint:** `/api/states/{state}/cities`
 - **Method:** `GET`
 - **URL Params:** 
 
-    Attribute | Type | Description
+    Name | Type | Description
     ----------|------|------------
-    `alias` | `string` | **Required.** The state alias
+    `state` | `string` | **Required.** The state alias
 
-- **Data Param:** `None`
+- **Request Body:** `None`
 - **Success Response**
   - **Code:** `200`
   - **Content:**
@@ -227,15 +229,15 @@ API endpoint that represents a list of cities in a state
 ### 4.4. List Local Governament Areas in a state
 
 API endpoint that represents a list of LGAs in a state
-- **URL Endpoint:** `/api/states/:state_alias/lgas`
+- **URL Endpoint:** `/api/states/{state}/lgas`
 - **Method:** `GET`
 - **URL Params:** 
 
-    Attribute | Type | Description
+    Name | Type | Description
     ----------|------|------------
-    `alias` | `string` | **Required.** The state alias
+    `state` | `string` | **Required.** The state alias
 
-- **Data Param:** `None`
+- **Request Body:** `None`
 - **Success Response**
   - **Code:** `200`
   - **Content:**
@@ -289,7 +291,7 @@ API endpoint that represents a list of LGAs
 - **URL Endpoint:** `/api/lgas`
 - **Method:** `GET`
 - **URL Params:** `None`
-- **Data Param:** `None`
+- **Request Body:** `None`
 - **Success Response**
   - **Code:** `200`
   - **Content:**
@@ -346,18 +348,18 @@ API endpoint that represents a list of LGAs
         ...
     ]
     ```
-### 4.2. Get a single Local Government Area
+### 4.4. Get a single Local Government Area
 
 API endpoint that represents a single LGA
-- **URL Endpoint:** `/api/lgas/:lga_alias`
+- **URL Endpoint:** `/api/lgas/{lga}`
 - **Method:** `GET`
 - **URL Params:** 
 
-    Attribute | Type | Description
+    Name | Type | Description
     ----------|------|------------
-    `alias` | `string` | **Required.** The lga alias
+    `lga` | `string` | **Required.** The lga alias
 
-- **Data Param:** `None`
+- **Request Body:** `None`
 - **Success Response**
   - **Code:** `200`
   - **Content:**
@@ -394,8 +396,18 @@ API endpoint that represents a single LGA
     }
     ```
 
+## 5. Operations
+
+### 5.1. Custom Querystring Params
+Service supports custom querystring parameters with minimal set of operations for including additional fields to response object.
+
+API Endpoint | Querystring | Result | Example
+-------------|-------------|----------|--------
+`/api/states` | `capital`, `lgas`, `cities`, `total` | Includes fields | [/api/states?cities](#41-get-list-of-states)
+`/api/states/{state}` | `capital` | Returns state capital | [/api/states/lagos?capital](#42-get-a-single-state)
+`/api/lgas/{lga}` | `state` | Includes field | [/api/lgas/surulere?state](#44-get-a-single-local-government-area)
 
 ## 5. License
 
-The NgLocations REST API is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The NGLocations REST API is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
