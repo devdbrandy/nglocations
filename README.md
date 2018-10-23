@@ -17,7 +17,7 @@
 </p>
 
 ## 1. Overview
-The NgLocations is an Open Source REST API that allows users to retrieve information of all states and geopolitical zones in Nigeria.
+The NgLocations is an Open Source REST API that allows users to retrieve information of all states and geopolitical zones in Nigeria. Informations include [states](#41-get-all-states), [cities](#), [local government areas](#), [geopolical zones](#) etc.
 
 ## 2. Table of Contents
 
