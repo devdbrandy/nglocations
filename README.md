@@ -27,7 +27,9 @@ The NgLocations is an Open Source REST API that allows users to retrieve informa
     - [3.1. Run locally](#31-run-locally)
     - [3.2. Deploy to heroku](#32-deploy-to-heroku)
 - [4. API Endpoints](#4-api-endpoints)
-    - [4.1. Get all states](#41-get-all-states)
+    - [4.1. Get list of states](#41-get-list-of-states)
+    - [4.2. Get a single state](#42-get-a-single-state)
+    - [4.3. List cities in a state](#43-list-cities-in-a-state)
 - [5. License](#5-license)
 
 ## 3. Installation
@@ -57,9 +59,9 @@ Alternatively, you can deploy your own copy of the app using the web-based flow:
 
 ## 4. API Endpoints
 
-### 4.1. Get all states
+### 4.1. Get list of states
 
-Returns a json data of a list of states
+API endpoint that represents a list of states
 - **URL Endpoint:** `/api/states`
 - **Method:** `GET`
 - **URL Params:** `None`
@@ -87,30 +89,137 @@ Returns a json data of a list of states
   ```
 - **Usage Sample:**
 
-```http
-GET https://nglocations.me/api/states
-HTTP/1.1
-Accept: application/json
+    ```http
+    GET https://nglocations.me/api/states
+    HTTP/1.1
+    Accept: application/json
 
-HTTP/1.1 200 OK
-Content-Type: application/json
+    HTTP/1.1 200 OK
+    Content-Type: application/json
 
-[
+    [
+        {
+            "code": "AB",
+            "name": "Abia",
+            "alias": "abia",
+            "href": "http://nglocations.me/api/states/abia"
+        },
+        {
+            "code": "AD",
+            "name": "Adamawa",
+            "alias": "adamawa",
+            "href": "http://nglocations.me/api/states/adamawa"
+        },
+        ...
+    ]
+    ```
+
+### 4.2. Get a single state
+
+API endpoint that represents a single state
+- **URL Endpoint:** `/api/states/:state_alias`
+- **Method:** `GET`
+- **URL Params:** 
+
+    Attribute | Type | Description
+    ----------|------|------------
+    `alias` | `string` | **Required.** The state alias
+
+- **Data Param:** `None`
+- **Success Response**
+  - **Code:** `200`
+  - **Content:**
+  ```http
     {
-        "code": "AB",
-        "name": "Abia",
-        "alias": "abia",
-        "href": "http://nglocations.me/api/states/abia"
-    },
+        "code": "LA",
+        "name": "Lagos",
+        "capital": "Ikeja",
+        "alias": "lagos",
+        "zone": "South-Western",
+        "latitude": "6.4530556",
+        "longitude": "3.3958333"
+    }
+  ```
+- **Error Response**
+  - **Code:** `404 Not Found`
+  - **Content:**
+  
+  ```http
+    {"error": "Resource does not exist"}
+  ```
+- **Usage Sample:**
+
+    ```http
+    GET https://nglocations.me/api/states/lagos
+    HTTP/1.1
+    Accept: application/json
+
+    HTTP/1.1 200 OK
+    Content-Type: application/json
+
     {
-        "code": "AD",
-        "name": "Adamawa",
-        "alias": "adamawa",
-        "href": "http://nglocations.me/api/states/adamawa"
-    },
-    ...
-]
-```
+        "code": "LA",
+        "name": "Lagos",
+        "capital": "Ikeja",
+        "alias": "lagos",
+        "zone": "South-Western",
+        "latitude": "6.4530556",
+        "longitude": "3.3958333"
+    }
+    ```
+
+### 4.3. List cities in a state
+
+API endpoint that represents a list of cities in a state
+- **URL Endpoint:** `/api/states/:state_alias/cities`
+- **Method:** `GET`
+- **URL Params:** 
+
+    Attribute | Type | Description
+    ----------|------|------------
+    `alias` | `string` | **Required.** The state alias
+
+- **Data Param:** `None`
+- **Success Response**
+  - **Code:** `200`
+  - **Content:**
+  ```http
+    [
+        {
+            "name": "Ikeja",
+            "alias": "ikeja"
+        },
+        ...
+    ]
+  ```
+- **Error Response**
+  - **Code:** `404 Not Found`
+  - **Content:**
+  
+  ```http
+    {"error": "Resource does not exist"}
+  ```
+- **Usage Sample:**
+
+    ```http
+    GET https://nglocations.me/api/states/enugu/cities
+    HTTP/1.1
+    Accept: application/json
+
+    HTTP/1.1 200 OK
+    Content-Type: application/json
+
+    [
+        {
+            "name": "Enugu",
+            "alias": "enugu"
+        },
+        {
+            "name": "Nsukka",
+            "alias": "nsukka"
+        },
+    ]
+    ```
 
 ## 5. License
 
