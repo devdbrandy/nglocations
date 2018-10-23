@@ -32,6 +32,7 @@ The NgLocations is an Open Source REST API that allows users to retrieve informa
     - [4.3. List cities in a state](#43-list-cities-in-a-state)
     - [4.4. List Local Governament Areas in a state](#44-list-local-governament-areas-in-a-state)
     - [4.4. Get list of Local Governament Areas](#44-get-list-of-local-governament-areas)
+    - [4.2. Get a single Local Government Area](#42-get-a-single-local-government-area)
 - [5. License](#5-license)
 
 ## 3. Installation
@@ -225,7 +226,7 @@ API endpoint that represents a list of cities in a state
     ```
 ### 4.4. List Local Governament Areas in a state
 
-API endpoint that represents a list of cities in a state
+API endpoint that represents a list of LGAs in a state
 - **URL Endpoint:** `/api/states/:state_alias/lgas`
 - **Method:** `GET`
 - **URL Params:** 
@@ -284,7 +285,7 @@ API endpoint that represents a list of cities in a state
     ```
 ### 4.4. Get list of Local Governament Areas
 
-API endpoint that represents a list of cities in a state
+API endpoint that represents a list of LGAs
 - **URL Endpoint:** `/api/lgas`
 - **Method:** `GET`
 - **URL Params:** `None`
@@ -345,6 +346,54 @@ API endpoint that represents a list of cities in a state
         ...
     ]
     ```
+### 4.2. Get a single Local Government Area
+
+API endpoint that represents a single LGA
+- **URL Endpoint:** `/api/lgas/:lga_alias`
+- **Method:** `GET`
+- **URL Params:** 
+
+    Attribute | Type | Description
+    ----------|------|------------
+    `alias` | `string` | **Required.** The lga alias
+
+- **Data Param:** `None`
+- **Success Response**
+  - **Code:** `200`
+  - **Content:**
+  ```http
+    {
+        "name": "Ikeja",
+        "alias": "ikeja",
+        "latitude": "6.4530556",
+        "longitude": "3.3958333"
+    }
+  ```
+- **Error Response**
+  - **Code:** `404 Not Found`
+  - **Content:**
+  
+  ```http
+    {"error": "Resource does not exist"}
+  ```
+- **Usage Sample:**
+
+    ```http
+    GET https://nglocations.me/api/lgas/ikeja
+    HTTP/1.1
+    Accept: application/json
+
+    HTTP/1.1 200 OK
+    Content-Type: application/json
+
+    {
+        "name": "Ikeja",
+        "alias": "ikeja",
+        "latitude": "6.4530556",
+        "longitude": "3.3958333"
+    }
+    ```
+
 
 ## 5. License
 
