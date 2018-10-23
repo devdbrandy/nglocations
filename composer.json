@@ -55,7 +55,8 @@
             "@php artisan package:discover"
         ],
         "test": "phpunit",
-        "test:coverage": "phpunit --coverage-clover tests/logs/test-reports/clover.xml"
+        "test:coverage": "phpunit --coverage-clover tests/logs/clover.xml",
+        "coveralls": "php-coveralls"
     },
     "config": {
         "preferred-install": "dist",
