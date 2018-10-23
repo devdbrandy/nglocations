@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Models\LGA;
 use App\Models\State;
@@ -12,7 +12,7 @@ use App\Http\Resources\StateResource;
 use App\Http\Resources\StateCollection;
 use Symfony\Component\HttpFoundation\Response;
 
-class ApiController extends Controller
+class Controller extends BaseController
 {
     /**
      * Display a listing of the resource.

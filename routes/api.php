@@ -19,12 +19,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 // states endppoints
 Route::group(['prefix' => 'states'], function () {
-    Route::get('/', 'ApiController@index');
-    Route::get('/{state}', 'ApiController@state')->name('api.states.show');
-    Route::get('/{state}/cities', 'ApiController@cities');
-    Route::get('/{state}/lgas', 'ApiController@lgas');
+    Route::get('/', 'Api\Controller@index');
+    Route::get('/{state}', 'Api\Controller@state')->name('api.states.show');
+    Route::get('/{state}/cities', 'Api\Controller@cities');
+    Route::get('/{state}/lgas', 'Api\Controller@lgas');
 });
 
 // lgas endpoints
-Route::get('lgas', 'ApiController@localGovAreas');
-Route::get('lgas/{lga}', 'ApiController@showLga')->name('api.lgas.show');
+Route::get('lgas', 'Api\Controller@localGovAreas');
+Route::get('lgas/{lga}', 'Api\Controller@showLga')->name('api.lgas.show');
