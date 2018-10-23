@@ -26,7 +26,7 @@ The NgLocations is an Open Source REST API that allows users to retrieve informa
 - [3. Installation](#3-installation)
     - [3.1. Run locally](#31-run-locally)
     - [3.2. Deploy to heroku](#32-deploy-to-heroku)
-- [4. API Endpoints](#4-api-endpoints)
+- [4. Usage](#4-usage)
     - [4.1 Get list of states](#41-get-list-of-states)
     - [4.2. Get a single state](#42-get-a-single-state)
     - [4.3. List cities in a state](#43-list-cities-in-a-state)
@@ -60,7 +60,7 @@ Alternatively, you can deploy your own copy of the app using the web-based flow:
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-## 4. API Endpoints
+## 4. Usage
 
 ### 4.1 Get list of states
 
