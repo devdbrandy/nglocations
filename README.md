@@ -27,9 +27,11 @@ The NgLocations is an Open Source REST API that allows users to retrieve informa
     - [3.1. Run locally](#31-run-locally)
     - [3.2. Deploy to heroku](#32-deploy-to-heroku)
 - [4. API Endpoints](#4-api-endpoints)
-    - [4.1. Get list of states](#41-get-list-of-states)
+    - [4.1 Get list of states](#41-get-list-of-states)
     - [4.2. Get a single state](#42-get-a-single-state)
     - [4.3. List cities in a state](#43-list-cities-in-a-state)
+    - [4.4. List Local Governament Areas in a state](#44-list-local-governament-areas-in-a-state)
+    - [4.4. Get list of Local Governament Areas](#44-get-list-of-local-governament-areas)
 - [5. License](#5-license)
 
 ## 3. Installation
@@ -37,8 +39,8 @@ The NgLocations is an Open Source REST API that allows users to retrieve informa
 ### 3.1. Run locally
 To run app locally, make sure you have `PHP >= 7.1.3` and `composer` installed.
 ```bash
-git clone https://github.com/devdbrandy/nglocal.git # or clone your own fork
-cd nglocal
+git clone https://github.com/devdbrandy/nglocations.git # or clone your own fork
+cd nglocations
 composer install
 cp .env.example .env
 php artisan key:generate
@@ -59,7 +61,7 @@ Alternatively, you can deploy your own copy of the app using the web-based flow:
 
 ## 4. API Endpoints
 
-### 4.1. Get list of states
+### 4.1 Get list of states
 
 API endpoint that represents a list of states
 - **URL Endpoint:** `/api/states`
@@ -218,6 +220,129 @@ API endpoint that represents a list of cities in a state
             "name": "Nsukka",
             "alias": "nsukka"
         },
+        ...
+    ]
+    ```
+### 4.4. List Local Governament Areas in a state
+
+API endpoint that represents a list of cities in a state
+- **URL Endpoint:** `/api/states/:state_alias/lgas`
+- **Method:** `GET`
+- **URL Params:** 
+
+    Attribute | Type | Description
+    ----------|------|------------
+    `alias` | `string` | **Required.** The state alias
+
+- **Data Param:** `None`
+- **Success Response**
+  - **Code:** `200`
+  - **Content:**
+  ```http
+    [
+        {
+            "name": "Agege",
+            "alias": "agege",
+            "latitude": "6.4530556",
+            "longitude": "3.3958333"
+        },
+        ...
+    ]
+  ```
+- **Error Response**
+  - **Code:** `404 Not Found`
+  - **Content:**
+  
+  ```http
+    {"error": "Resource does not exist"}
+  ```
+- **Usage Sample:**
+
+    ```http
+    GET https://nglocations.me/api/states/enugu/cities
+    HTTP/1.1
+    Accept: application/json
+
+    HTTP/1.1 200 OK
+    Content-Type: application/json
+
+    [
+        {
+            "name": "Agege",
+            "alias": "agege",
+            "latitude": "6.4530556",
+            "longitude": "3.3958333"
+        },
+        {
+            "name": "Ajeromi\/ifelodun",
+            "alias": "ajeromiifelodun",
+            "latitude": "6.4530556",
+            "longitude": "3.3958333"
+        },
+        ...
+    ]
+    ```
+### 4.4. Get list of Local Governament Areas
+
+API endpoint that represents a list of cities in a state
+- **URL Endpoint:** `/api/lgas`
+- **Method:** `GET`
+- **URL Params:** `None`
+- **Data Param:** `None`
+- **Success Response**
+  - **Code:** `200`
+  - **Content:**
+  ```http
+    [
+        {
+            "state": "Abia",
+            "alias": "abia",
+            "lga": {
+                "name": "Aba North",
+                "alias": "aba-north",
+                "href": "http://nglocations.me/api/lgas/aba-north"
+            }
+        },
+        ...
+    ]
+  ```
+- **Error Response**
+  - **Code:** `404 Not Found`
+  - **Content:**
+  
+  ```http
+    {"error": "Resource does not exist"}
+  ```
+- **Usage Sample:**
+
+    ```http
+    GET https://nglocations.me/api/lgas
+    HTTP/1.1
+    Accept: application/json
+
+    HTTP/1.1 200 OK
+    Content-Type: application/json
+
+    [
+        {
+            "state": "Abia",
+            "alias": "abia",
+            "lga": {
+                "name": "Aba North",
+                "alias": "aba-north",
+                "href": "http://nglocations.me/api/lgas/aba-north"
+            }
+        },
+        {
+            "state": "Abia",
+            "alias": "abia",
+            "lga": {
+                "name": "Aba South",
+                "alias": "aba-south",
+                "href": "http://nglocations.me/api/lgas/aba-south"
+            }
+        },
+        ...
     ]
     ```
 
