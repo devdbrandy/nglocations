@@ -23,7 +23,8 @@ class Controller extends BaseController
      *   operationId="getStates",
      *   @OA\Response(
      *     response=200,
-     *     description="Successful operation"
+     *     description="Successful operation",
+     *     @OA\JsonContent(ref="#/components/schemas/States"),
      *   )
      * )
      *
@@ -52,11 +53,13 @@ class Controller extends BaseController
      *   ),
      *   @OA\Response(
      *     response=200,
-     *     description="Successful operation"
+     *     description="Successful operation",
+     *     @OA\JsonContent(ref="#/components/schemas/State"),
      *   ),
      *   @OA\Response(
      *     response=404,
-     *     description="Resource not found"
+     *     description="Resource not found",
+     *     @OA\JsonContent(ref="#/components/schemas/Error"),
      *   )
      * )
      *
@@ -91,7 +94,8 @@ class Controller extends BaseController
      *   ),
      *   @OA\Response(
      *     response=200,
-     *     description="Successful operation"
+     *     description="Successful operation",
+     *     @OA\JsonContent(ref="#/components/schemas/Cities"),
      *   )
      * )
      *
@@ -121,7 +125,8 @@ class Controller extends BaseController
      *   ),
      *   @OA\Response(
      *     response=200,
-     *     description="Successful operation"
+     *     description="Successful operation",
+     *     @OA\JsonContent(ref="#/components/schemas/LGAs"),
      *   )
      * )
      *
@@ -130,7 +135,7 @@ class Controller extends BaseController
      * @param  \App\Models\State  $state
      * @return \Illuminate\Http\Response
      */
-    public function getLgas(State $state)
+    public function getLGAs(State $state)
     {
         return LgaResource::collection($state->lgas);
     }
@@ -144,7 +149,8 @@ class Controller extends BaseController
      *   operationId="getLgasAll",
      *   @OA\Response(
      *     response=200,
-     *     description="Successful operation"
+     *     description="Successful operation",
+     *     @OA\JsonContent(ref="#/components/schemas/LGAs"),
      *   )
      * )
      *
@@ -152,7 +158,7 @@ class Controller extends BaseController
      *
      * @return \Illuminate\Http\Response
      */
-    public function getLgasAll()
+    public function getLGAsAll()
     {
         return LgaCollection::collection(LGA::all());
     }
@@ -173,11 +179,13 @@ class Controller extends BaseController
      *   ),
      *   @OA\Response(
      *     response=200,
-     *     description="Successful operation"
+     *     description="Successful operation",
+     *     @OA\JsonContent(ref="#/components/schemas/LGA"),
      *   ),
      *   @OA\Response(
      *     response=404,
-     *     description="Resource not found"
+     *     description="Resource not found",
+     *     @OA\JsonContent(ref="#/components/schemas/Error"),
      *   )
      * )
      *
@@ -187,7 +195,7 @@ class Controller extends BaseController
      * @param  \App\Models\LGA  $state
      * @return \Illuminate\Http\Response
      */
-    public function getLga(Request $request, LGA $lga)
+    public function getLGA(Request $request, LGA $lga)
     {
         return new LgaResource($lga);
     }

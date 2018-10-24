@@ -4,7 +4,7 @@
         "title": "NGLocations API",
         "description": "REST API that allows users to retrieve information of all states in Nigeria.",
         "contact": {
-            "name": "DaylicousSoft",
+            "name": "DayliciousSoft",
             "email": "daylicious@gmail.com"
         },
         "license": {
@@ -30,7 +30,14 @@
                 "operationId": "getStates",
                 "responses": {
                     "200": {
-                        "description": "Successful operation"
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/States"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -56,10 +63,24 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful operation"
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/State"
+                                }
+                            }
+                        }
                     },
                     "404": {
-                        "description": "Resource not found"
+                        "description": "Resource not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -85,7 +106,14 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful operation"
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Cities"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -111,7 +139,14 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful operation"
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LGAs"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -126,7 +161,14 @@
                 "operationId": "getLgasAll",
                 "responses": {
                     "200": {
-                        "description": "Successful operation"
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LGAs"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -152,11 +194,122 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful operation"
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LGA"
+                                }
+                            }
+                        }
                     },
                     "404": {
-                        "description": "Resource not found"
+                        "description": "Resource not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
                     }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Error": {
+                "properties": {
+                    "error": {
+                        "description": "Error message",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "City": {
+                "properties": {
+                    "name": {
+                        "description": "The city name",
+                        "type": "string"
+                    },
+                    "alias": {
+                        "description": "The city alias",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "Cities": {
+                "description": "A list of Cities",
+                "type": "array",
+                "items": {
+                    "$ref": "#/components/schemas/City"
+                }
+            },
+            "LGA": {
+                "properties": {
+                    "name": {
+                        "description": "The LGA name",
+                        "type": "string"
+                    },
+                    "alias": {
+                        "description": "The LGA alias",
+                        "type": "string"
+                    },
+                    "latitude": {
+                        "description": "The LGA latitude cordinate",
+                        "type": "string"
+                    },
+                    "longitude": {
+                        "description": "The LGA longitude cordinate",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "LGAs": {
+                "description": "A list of LGAs",
+                "type": "array",
+                "items": {
+                    "$ref": "#/components/schemas/LGA"
+                }
+            },
+            "State": {
+                "properties": {
+                    "code": {
+                        "description": "The state short code",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "The state name",
+                        "type": "string"
+                    },
+                    "alias": {
+                        "description": "The state alias",
+                        "type": "string"
+                    },
+                    "zone": {
+                        "description": "The state zone",
+                        "type": "string"
+                    },
+                    "latitude": {
+                        "description": "The state latitude",
+                        "type": "string"
+                    },
+                    "longitude": {
+                        "description": "The state longitude",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "States": {
+                "description": "A list of states",
+                "type": "array",
+                "items": {
+                    "$ref": "#/components/schemas/State"
                 }
             }
         }

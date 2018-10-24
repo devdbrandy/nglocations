@@ -22,9 +22,9 @@ Route::group(['prefix' => 'states'], function () {
     Route::get('/', 'Api\Controller@getStates');
     Route::get('/{state}', 'Api\Controller@getState')->name('api.states.show');
     Route::get('/{state}/cities', 'Api\Controller@getCities');
-    Route::get('/{state}/lgas', 'Api\Controller@getLgas');
+    Route::get('/{state}/lgas', 'Api\Controller@getLGAs');
 });
 
 // lgas endpoints
-Route::get('lgas', 'Api\Controller@getLgasAll');
-Route::get('lgas/{lga}', 'Api\Controller@getLga')->name('api.lgas.show');
+Route::get('lgas', 'Api\Controller@getLGAsAll');
+Route::get('lgas/{lga}', 'Api\Controller@getLGA')->name('api.lgas.show');
