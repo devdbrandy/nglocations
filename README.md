@@ -67,7 +67,7 @@ Alternatively, you can deploy your own copy of the app using the web-based flow:
 ### 4.1 Get list of states
 
 API endpoint that represents a list of states
-- **URL Endpoint:** `/api/states`
+- **URL Endpoint:** `/api/v1/states`
 - **Method:** `GET`
 - **URL Params:** `None`
 - **Request Body:** `None`
@@ -80,7 +80,7 @@ API endpoint that represents a list of states
             "code": "AB",
             "name": "Abia",
             "alias": "abia",
-            "href": "http://nglocations.me/api/states/abia"
+            "href": "http://nglocations.me/api/v1/states/abia"
         }
         ...
     ]
@@ -95,7 +95,7 @@ API endpoint that represents a list of states
 - **Usage Sample:**
 
     ```http
-    GET https://nglocations.me/api/states
+    GET https://nglocations.me/api/v1/states
     HTTP/1.1
     Accept: application/json
 
@@ -107,13 +107,13 @@ API endpoint that represents a list of states
             "code": "AB",
             "name": "Abia",
             "alias": "abia",
-            "href": "http://nglocations.me/api/states/abia"
+            "href": "http://nglocations.me/api/v1/states/abia"
         },
         {
             "code": "AD",
             "name": "Adamawa",
             "alias": "adamawa",
-            "href": "http://nglocations.me/api/states/adamawa"
+            "href": "http://nglocations.me/api/v1/states/adamawa"
         },
         ...
     ]
@@ -122,7 +122,7 @@ API endpoint that represents a list of states
 ### 4.2. Get a single state
 
 API endpoint that represents a single state
-- **URL Endpoint:** `/api/states/{state}`
+- **URL Endpoint:** `/api/v1/states/{state}`
 - **Method:** `GET`
 - **URL Params:** 
 
@@ -155,7 +155,7 @@ API endpoint that represents a single state
 - **Usage Sample:**
 
     ```http
-    GET https://nglocations.me/api/states/lagos
+    GET https://nglocations.me/api/v1/states/lagos
     HTTP/1.1
     Accept: application/json
 
@@ -176,7 +176,7 @@ API endpoint that represents a single state
 ### 4.3. List cities in a state
 
 API endpoint that represents a list of cities in a state
-- **URL Endpoint:** `/api/states/{state}/cities`
+- **URL Endpoint:** `/api/v1/states/{state}/cities`
 - **Method:** `GET`
 - **URL Params:** 
 
@@ -207,7 +207,7 @@ API endpoint that represents a list of cities in a state
 - **Usage Sample:**
 
     ```http
-    GET https://nglocations.me/api/states/enugu/cities
+    GET https://nglocations.me/api/v1/states/enugu/cities
     HTTP/1.1
     Accept: application/json
 
@@ -229,7 +229,7 @@ API endpoint that represents a list of cities in a state
 ### 4.4. List Local Governament Areas in a state
 
 API endpoint that represents a list of LGAs in a state
-- **URL Endpoint:** `/api/states/{state}/lgas`
+- **URL Endpoint:** `/api/v1/states/{state}/lgas`
 - **Method:** `GET`
 - **URL Params:** 
 
@@ -262,7 +262,7 @@ API endpoint that represents a list of LGAs in a state
 - **Usage Sample:**
 
     ```http
-    GET https://nglocations.me/api/states/enugu/cities
+    GET https://nglocations.me/api/v1/states/enugu/cities
     HTTP/1.1
     Accept: application/json
 
@@ -288,7 +288,7 @@ API endpoint that represents a list of LGAs in a state
 ### 4.4. Get list of Local Governament Areas
 
 API endpoint that represents a list of LGAs
-- **URL Endpoint:** `/api/lgas`
+- **URL Endpoint:** `/api/v1/lgas`
 - **Method:** `GET`
 - **URL Params:** `None`
 - **Request Body:** `None`
@@ -303,7 +303,7 @@ API endpoint that represents a list of LGAs
             "lga": {
                 "name": "Aba North",
                 "alias": "aba-north",
-                "href": "http://nglocations.me/api/lgas/aba-north"
+                "href": "http://nglocations.me/api/v1/lgas/aba-north"
             }
         },
         ...
@@ -319,7 +319,7 @@ API endpoint that represents a list of LGAs
 - **Usage Sample:**
 
     ```http
-    GET https://nglocations.me/api/lgas
+    GET https://nglocations.me/api/v1/lgas
     HTTP/1.1
     Accept: application/json
 
@@ -333,7 +333,7 @@ API endpoint that represents a list of LGAs
             "lga": {
                 "name": "Aba North",
                 "alias": "aba-north",
-                "href": "http://nglocations.me/api/lgas/aba-north"
+                "href": "http://nglocations.me/api/v1/lgas/aba-north"
             }
         },
         {
@@ -342,7 +342,7 @@ API endpoint that represents a list of LGAs
             "lga": {
                 "name": "Aba South",
                 "alias": "aba-south",
-                "href": "http://nglocations.me/api/lgas/aba-south"
+                "href": "http://nglocations.me/api/v1/lgas/aba-south"
             }
         },
         ...
@@ -351,7 +351,7 @@ API endpoint that represents a list of LGAs
 ### 4.4. Get a single Local Government Area
 
 API endpoint that represents a single LGA
-- **URL Endpoint:** `/api/lgas/{lga}`
+- **URL Endpoint:** `/api/v1/lgas/{lga}`
 - **Method:** `GET`
 - **URL Params:** 
 
@@ -381,7 +381,7 @@ API endpoint that represents a single LGA
 - **Usage Sample:**
 
     ```http
-    GET https://nglocations.me/api/lgas/ikeja
+    GET https://nglocations.me/api/v1/lgas/ikeja
     HTTP/1.1
     Accept: application/json
 
@@ -403,9 +403,9 @@ Service supports custom querystring parameters with minimal set of operations fo
 
 API Endpoint | Querystring | Result | Example
 -------------|-------------|----------|--------
-`/api/states` | `capital`, `lgas`, `cities`, `total` | Includes fields | [/api/states?cities](#41-get-list-of-states)
-`/api/states/{state}` | `capital` | Returns state capital | [/api/states/lagos?capital](#42-get-a-single-state)
-`/api/lgas/{lga}` | `state` | Includes field | [/api/lgas/surulere?state](#44-get-a-single-local-government-area)
+`/api/v1/states` | `capital`, `lgas`, `cities`, `total` | Includes fields | [/api/v1/states?cities](#41-get-list-of-states)
+`/api/v1/states/{state}` | `capital` | Returns state capital | [/api/v1/states/lagos?capital](#42-get-a-single-state)
+`/api/v1/lgas/{lga}` | `state` | Includes field | [/api/v1/lgas/surulere?state](#44-get-a-single-local-government-area)
 
 ## 5. License
 
