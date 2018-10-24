@@ -2,6 +2,50 @@
 
 namespace App\Models;
 
+/**
+ * @OA\Schema(
+ *     @OA\Property(
+ *         property="code",
+ *         type="string",
+ *         description="The state short code"
+ *     ),
+ *     @OA\Property(
+ *         property="name",
+ *         type="string",
+ *         description="The state name"
+ *     ),
+ *     @OA\Property(
+ *         property="alias",
+ *         type="string",
+ *         description="The state alias"
+ *     ),
+ *     @OA\Property(
+ *         property="zone",
+ *         type="string",
+ *         description="The state zone"
+ *     ),
+ *     @OA\Property(
+ *         property="latitude",
+ *         type="string",
+ *         description="The state latitude"
+ *     ),
+ *     @OA\Property(
+ *         property="longitude",
+ *         type="string",
+ *         description="The state longitude"
+ *     ),
+ * )
+ *
+ *
+ * @OA\Schema(
+ *     schema="States",
+ *     type="array",
+ *     description="A list of states",
+ *     @OA\Items(ref="#/components/schemas/State")
+ * )
+ *
+ */
+
 class State extends BaseModel
 {
     /**

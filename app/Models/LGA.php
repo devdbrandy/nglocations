@@ -2,6 +2,38 @@
 
 namespace App\Models;
 
+/**
+ * @OA\Schema(
+ *     @OA\Property(
+ *         property="name",
+ *         type="string",
+ *         description="The LGA name"
+ *     ),
+ *     @OA\Property(
+ *         property="alias",
+ *         type="string",
+ *         description="The LGA alias"
+ *     ),
+ *     @OA\Property(
+ *         property="latitude",
+ *         type="string",
+ *         description="The LGA latitude cordinate"
+ *     ),
+ *     @OA\Property(
+ *         property="longitude",
+ *         type="string",
+ *         description="The LGA longitude cordinate"
+ *     ),
+ * )
+ *
+ * @OA\Schema(
+ *     schema="LGAs",
+ *     type="array",
+ *     description="A list of LGAs",
+ *     @OA\Items(ref="#/components/schemas/LGA")
+ * )
+ *
+ */
 class LGA extends BaseModel
 {
     use StateTrait;
