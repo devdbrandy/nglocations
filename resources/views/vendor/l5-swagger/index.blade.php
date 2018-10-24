@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
+  {{-- <link rel="stylesheet" href="{{ asset('swagger/css/theme-material.css') }}"> --}}
   <link rel="stylesheet" type="text/css" href="{{ l5_swagger_asset('swagger-ui.css') }}" >
   <link rel="icon" type="image/png" href="{{ l5_swagger_asset('favicon-32x32.png') }}" sizes="32x32" />
   <link rel="icon" type="image/png" href="{{ l5_swagger_asset('favicon-16x16.png') }}" sizes="16x16" />
@@ -37,6 +38,14 @@
 
     .col.response-col_description {
         width: 60%;
+    }
+
+    span.url,
+    .scheme-container,
+    .topbar-wrapper.download-url-wrapper,
+    .swagger-ui .topbar .download-url-wrapper,
+    .swagger-ui .info .title small:nth-of-type(2) {
+        display: none !important;
     }
   </style>
 </head>
@@ -79,6 +88,10 @@ window.onload = function() {
   })
 
   window.ui = ui
+
+  // Customize site title
+  const titleSpan = document.querySelector('.swagger-ui .topbar a span');
+  titleSpan.innerHTML = 'NGLocations';
 }
 </script>
 </body>
