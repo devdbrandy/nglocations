@@ -157,4 +157,33 @@ class ApiTest extends TestCase
         $response = $this->get('/api/v1/zones');
         $response->assertStatus(200)->assertJsonCount(6);
     }
+
+    /**
+     * @test
+     * Test retrieves a single zone.
+     *
+     * @return void
+     */
+    public function get_all_zone()
+    {
+        $response = $this->get('/api/v1/zones/NE');
+        $response->assertStatus(200)->assertExactJson([
+            'code' => 'NE',
+            'name' => 'North-Eastern',
+        ]);
+    }
+
+    /**
+     * @test
+     * Test retrieves a single zone with custom states param.
+     *
+     * @return void
+     */
+    public function get_all_zone_with_custom_states_param()
+    {
+        $response = $this->get("/api/v1/zones/NE?states");
+        $response
+            ->assertStatus(200)
+            ->assertJsonStructure(['code', 'name', 'states']);
+    }
 }

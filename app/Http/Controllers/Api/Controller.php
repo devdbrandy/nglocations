@@ -8,6 +8,7 @@ use App\Models\State;
 use Illuminate\Http\Request;
 use App\Http\Resources\LgaResource;
 use App\Http\Resources\CityResource;
+use App\Http\Resources\ZoneResource;
 use App\Http\Resources\LgaCollection;
 use App\Http\Resources\StateResource;
 use App\Http\Resources\StateCollection;
@@ -247,5 +248,42 @@ class Controller extends BaseController
     public function getZones()
     {
         return response()->json(Zone::all());
+    }
+
+    /**
+     * @OA\Get(
+     *   path="/zones/{zone}",
+     *   tags={"Get a single zone"},
+     *   summary="Retrieve a single zone",
+     *   description="Returns a Zone object",
+     *   operationId="getZone",
+     *   @OA\Parameter(
+     *      name="code",
+     *      description="Unique identifier for zone",
+     *      required=true,
+     *      in="path",
+     *      @OA\Schema(type="string")
+     *   ),
+     *   @OA\Response(
+     *     response=200,
+     *     description="Successful operation",
+     *     @OA\JsonContent(ref="#/components/schemas/Zone"),
+     *   ),
+     *   @OA\Response(
+     *     response=404,
+     *     description="Resource not found",
+     *     @OA\JsonContent(ref="#/components/schemas/Error"),
+     *   )
+     * )
+     *
+     * Display the specified resource.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\LGA  $state
+     * @return \Illuminate\Http\Response
+     */
+    public function getZone(Request $request, Zone $zone)
+    {
+        return new ZoneResource($zone);
     }
 }

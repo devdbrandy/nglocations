@@ -31,3 +31,4 @@ Route::get('lgas/{lga}', 'Api\Controller@getLGA')->name('api.lgas.show');
 
 // Zones enpoints
 Route::get('zones', 'Api\Controller@getZones');
+Route::get('zones/{zone}', 'Api\Controller@getZone');
