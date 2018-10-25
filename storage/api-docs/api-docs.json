@@ -1,0 +1,317 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "NGLocations API",
+        "description": "REST API that allows users to retrieve information of all states in Nigeria.",
+        "contact": {
+            "name": "DayliciousSoft",
+            "email": "daylicious@gmail.com"
+        },
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://nglocal.me/api",
+            "description": "Server url"
+        }
+    ],
+    "paths": {
+        "/states": {
+            "get": {
+                "tags": [
+                    "Get list of states"
+                ],
+                "summary": "Get list of states",
+                "description": "Returns list of state object",
+                "operationId": "getStates",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/States"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/states/{state}": {
+            "get": {
+                "tags": [
+                    "Get a single state"
+                ],
+                "summary": "Retrieve a single states",
+                "description": "Returns a state object",
+                "operationId": "getState",
+                "parameters": [
+                    {
+                        "name": "state",
+                        "in": "path",
+                        "description": "State alias",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/State"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/states/{state}/cities": {
+            "get": {
+                "tags": [
+                    "List Cities in a state"
+                ],
+                "summary": "List Cities in a state",
+                "description": "Returns list of City object",
+                "operationId": "getCities",
+                "parameters": [
+                    {
+                        "name": "state",
+                        "in": "path",
+                        "description": "State alias",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Cities"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/states/{state}/lgas": {
+            "get": {
+                "tags": [
+                    "List Local Governament Areas in a state"
+                ],
+                "summary": "List Local Governament Areas in a state",
+                "description": "Returns list of LGA object",
+                "operationId": "getLgas",
+                "parameters": [
+                    {
+                        "name": "state",
+                        "in": "path",
+                        "description": "State alias",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LGAs"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/lgas": {
+            "get": {
+                "tags": [
+                    "Get list of local governemnt areas"
+                ],
+                "summary": "Get list of local governemnt areas",
+                "description": "Returns list of LGA object",
+                "operationId": "getLgasAll",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LGAs"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/lgas/{lga}": {
+            "get": {
+                "tags": [
+                    "Get a single Local Government Area"
+                ],
+                "summary": "Retrieve a single Local Government Area",
+                "description": "Returns a LGA object",
+                "operationId": "getLga",
+                "parameters": [
+                    {
+                        "name": "lga",
+                        "in": "path",
+                        "description": "Lga alias",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LGA"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Error": {
+                "properties": {
+                    "error": {
+                        "description": "Error message",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "City": {
+                "properties": {
+                    "name": {
+                        "description": "The city name",
+                        "type": "string"
+                    },
+                    "alias": {
+                        "description": "The city alias",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "Cities": {
+                "description": "A list of Cities",
+                "type": "array",
+                "items": {
+                    "$ref": "#/components/schemas/City"
+                }
+            },
+            "LGA": {
+                "properties": {
+                    "name": {
+                        "description": "The LGA name",
+                        "type": "string"
+                    },
+                    "alias": {
+                        "description": "The LGA alias",
+                        "type": "string"
+                    },
+                    "latitude": {
+                        "description": "The LGA latitude cordinate",
+                        "type": "string"
+                    },
+                    "longitude": {
+                        "description": "The LGA longitude cordinate",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "LGAs": {
+                "description": "A list of LGAs",
+                "type": "array",
+                "items": {
+                    "$ref": "#/components/schemas/LGA"
+                }
+            },
+            "State": {
+                "properties": {
+                    "code": {
+                        "description": "The state short code",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "The state name",
+                        "type": "string"
+                    },
+                    "alias": {
+                        "description": "The state alias",
+                        "type": "string"
+                    },
+                    "zone": {
+                        "description": "The state zone",
+                        "type": "string"
+                    },
+                    "latitude": {
+                        "description": "The state latitude",
+                        "type": "string"
+                    },
+                    "longitude": {
+                        "description": "The state longitude",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "States": {
+                "description": "A list of states",
+                "type": "array",
+                "items": {
+                    "$ref": "#/components/schemas/State"
+                }
+            }
+        }
+    }
+}

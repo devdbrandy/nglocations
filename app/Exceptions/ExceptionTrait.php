@@ -10,7 +10,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 trait ExceptionTrait
 {
     /**
-     * Handle API exceptions
+     * Handle API exceptions.
      *
      * @param \Illuminate\Http\Request $request
      * @param Exception $exception
@@ -30,10 +30,10 @@ trait ExceptionTrait
     }
 
     /**
-     * Check for ModelNotFoundException
+     * Check for ModelNotFoundException.
      *
      * @param Exception $exception
-     * @return boolean
+     * @return bool
      */
     protected function isModelNotFound($exception)
     {
@@ -41,10 +41,10 @@ trait ExceptionTrait
     }
 
     /**
-     * Check for NotFoundHttpException
+     * Check for NotFoundHttpException.
      *
      * @param Exception $exception
-     * @return boolean
+     * @return bool
      */
     protected function isNotFoundHttp($exception)
     {
@@ -52,7 +52,7 @@ trait ExceptionTrait
     }
 
     /**
-     * Reponse for ModelNotFoundException
+     * Reponse for ModelNotFoundException.
      *
      * @param Exception $exception
      * @return \Illuminate\Http\Response
@@ -60,12 +60,12 @@ trait ExceptionTrait
     protected function ModelNotFoundResponse($exception)
     {
         return response()->json([
-            'error' => 'Resource not found'
+            'error' => 'Resource not found',
         ], Response::HTTP_NOT_FOUND);
     }
 
     /**
-     * Reponse for NotFoundHttpException
+     * Reponse for NotFoundHttpException.
      *
      * @param Exception $exception
      * @return \Illuminate\Http\Response
@@ -73,7 +73,7 @@ trait ExceptionTrait
     protected function NotFoundHttpResponse($exception)
     {
         return response()->json([
-            'error' => 'Provided route is invalid'
+            'error' => 'Provided route is invalid',
         ], Response::HTTP_NOT_FOUND);
     }
 }

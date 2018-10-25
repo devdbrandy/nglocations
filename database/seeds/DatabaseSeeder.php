@@ -1,8 +1,6 @@
 <?php
 
-use League\Csv\Reader;
 use Illuminate\Database\Seeder;
-use App\Models\GeopoliticalZone;
 
 class DatabaseSeeder extends Seeder
 {

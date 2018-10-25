@@ -2,11 +2,40 @@
 
 namespace App\Models;
 
-use App\Models\LGA;
-use App\Models\City;
-use App\Models\Zone;
-use App\Models\BaseModel;
-
+/**
+ * @OA\Schema(
+ *     @OA\Property(
+ *         property="code",
+ *         type="string",
+ *         description="The state short code"
+ *     ),
+ *     @OA\Property(
+ *         property="name",
+ *         type="string",
+ *         description="The state name"
+ *     ),
+ *     @OA\Property(
+ *         property="alias",
+ *         type="string",
+ *         description="The state alias"
+ *     ),
+ *     @OA\Property(
+ *         property="zone",
+ *         type="string",
+ *         description="The state zone"
+ *     ),
+ *     @OA\Property(
+ *         property="latitude",
+ *         type="string",
+ *         description="The state latitude"
+ *     ),
+ *     @OA\Property(
+ *         property="longitude",
+ *         type="string",
+ *         description="The state longitude"
+ *     ),
+ * )
+ */
 class State extends BaseModel
 {
     /**
@@ -34,7 +63,7 @@ class State extends BaseModel
     }
 
     /**
-     * Get the name of the zone that owns the state
+     * Get the name of the zone that owns the state.
      *
      * @return void
      */

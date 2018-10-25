@@ -7,30 +7,28 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ApiTest extends TestCase
 {
-    public $totalStates = 37;
-
     /**
      * @test
-     * Test retrieves all states
+     * Test retrieves all states.
      *
      * @return void
      */
     public function get_all_states()
     {
-        $response = $this->get('/api/states');
-        $response->assertStatus(200)->assertJsonCount($this->totalStates);
+        $response = $this->get('/api/v1/states');
+        $response->assertStatus(200)->assertJsonCount(37);
     }
 
     /**
      * @test
-     * Test retrieves a single state details
+     * Test retrieves a single state details.
      *
      * @return void
      */
     public function get_state_details()
     {
         $state = 'lagos';
-        $response = $this->get("/api/states/{$state}");
+        $response = $this->get("/api/v1/states/{$state}");
         $response
             ->assertStatus(200)
             ->assertJsonStructure([
@@ -40,46 +38,46 @@ class ApiTest extends TestCase
                 'alias',
                 'zone',
                 'latitude',
-                'longitude'
+                'longitude',
             ]);
     }
 
     /**
      * @test
-     * Test retrieves cities in a given state
+     * Test retrieves cities in a given state.
      *
      * @return void
      */
     public function get_cities_in_a_given_state()
     {
         $state = 'enugu';
-        $response = $this->get("/api/states/{$state}/cities");
+        $response = $this->get("/api/v1/states/{$state}/cities");
         $response->assertStatus(200);
     }
 
     /**
      * @test
-     * Test retrieves all local government areas in a given state
+     * Test retrieves all local government areas in a given state.
      *
      * @return void
      */
     public function get_lgas_in_a_given_state()
     {
         $state = 'delta';
-        $response = $this->get("/api/states/{$state}/lgas");
+        $response = $this->get("/api/v1/states/{$state}/lgas");
         $response->assertStatus(200);
     }
 
     /**
      * @test
-     * Test retrieves state capital
+     * Test retrieves state capital.
      *
      * @return void
      */
     public function get_state_capital()
     {
         $state = 'delta';
-        $response = $this->get("/api/states/{$state}?capital");
+        $response = $this->get("/api/v1/states/{$state}?capital");
         $response
             ->assertStatus(200)
             ->assertExactJson(['Asaba']);
@@ -87,7 +85,7 @@ class ApiTest extends TestCase
 
     /**
      * @test
-     * Test retrieves all states with custom params
+     * Test retrieves all states with custom params.
      *
      * @return void
      */
@@ -96,55 +94,96 @@ class ApiTest extends TestCase
         $params = ['capital', 'lgas', 'cities', 'total'];
 
         foreach ($params as $param) {
-            $response = $this->get("/api/states?{$param}");
+            $response = $this->get("/api/v1/states?{$param}");
             $response->assertStatus(200);
         }
     }
 
     /**
      * @test
-     * Test retrieves all local government areas
+     * Test retrieves all local government areas.
      *
      * @return void
      */
     public function get_all_lgas()
     {
-        $response = $this->get('/api/lgas');
+        $response = $this->get('/api/v1/lgas');
         $response->assertStatus(200);
     }
 
     /**
      * @test
-     * Test retrieves local government area details
+     * Test retrieves local government area details.
      *
      * @return void
      */
     public function get_lga_details()
     {
         $lga = 'aba-north';
-        $response = $this->get("/api/lgas/{$lga}");
+        $response = $this->get("/api/v1/lgas/{$lga}");
         $response
             ->assertStatus(200)
             ->assertJsonStructure([
                 'name',
                 'alias',
                 'latitude',
-                'longitude'
+                'longitude',
             ]);
     }
 
     /**
      * @test
-     * Test retrieves local government area details with custom state param
+     * Test retrieves local government area details with custom state param.
      *
      * @return void
      */
     public function get_lga_details_with_custom_state_param()
     {
         $lga = 'aba-north';
-        $response = $this->get("/api/lgas/{$lga}?state");
+        $response = $this->get("/api/v1/lgas/{$lga}?state");
         $response
             ->assertStatus(200)
             ->assertJsonStructure(['state']);
+    }
+
+    /**
+     * @test
+     * Test retrieves all zones.
+     *
+     * @return void
+     */
+    public function get_all_zones()
+    {
+        $response = $this->get('/api/v1/zones');
+        $response->assertStatus(200)->assertJsonCount(6);
+    }
+
+    /**
+     * @test
+     * Test retrieves a single zone.
+     *
+     * @return void
+     */
+    public function get_all_zone()
+    {
+        $response = $this->get('/api/v1/zones/NE');
+        $response->assertStatus(200)->assertExactJson([
+            'code' => 'NE',
+            'name' => 'North-Eastern',
+        ]);
+    }
+
+    /**
+     * @test
+     * Test retrieves a single zone with custom states param.
+     *
+     * @return void
+     */
+    public function get_all_zone_with_custom_states_param()
+    {
+        $response = $this->get("/api/v1/zones/NE?states");
+        $response
+            ->assertStatus(200)
+            ->assertJsonStructure(['code', 'name', 'states']);
     }
 }

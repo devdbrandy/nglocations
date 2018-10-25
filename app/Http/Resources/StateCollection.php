@@ -2,7 +2,6 @@
 
 namespace App\Http\Resources;
 
-use App\Http\Resources\CityResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class StateCollection extends JsonResource
@@ -26,9 +25,9 @@ class StateCollection extends JsonResource
             $this->mergeWhen($request->has('total'), [
                 'total' => [
                     'lgas' => $this->lgas->count(),
-                    'cities' => $this->cities->count()
-                ]
-            ])
+                    'cities' => $this->cities->count(),
+                ],
+            ]),
         ];
     }
 }

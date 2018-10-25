@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class StateResource extends JsonResource
+class ZoneResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,11 +17,7 @@ class StateResource extends JsonResource
         return [
             'code' => $this->code,
             'name' => $this->name,
-            'capital' => $this->capital,
-            'alias' => $this->alias,
-            'zone' => $this->getZone(),
-            'latitude' => $this->lat,
-            'longitude' => $this->lon,
+            'states' => $this->when($request->has('states'), StateCollection::collection($this->states)),
         ];
     }
 }

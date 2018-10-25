@@ -2,9 +2,20 @@
 
 namespace App\Models;
 
-use App\Models\State;
-use App\Models\BaseModel;
-
+/**
+ * @OA\Schema(
+ *     @OA\Property(
+ *         property="name",
+ *         type="string",
+ *         description="The city name"
+ *     ),
+ *     @OA\Property(
+ *         property="alias",
+ *         type="string",
+ *         description="The city alias"
+ *     ),
+ * )
+ */
 class City extends BaseModel
 {
     /**

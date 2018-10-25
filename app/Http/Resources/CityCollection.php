@@ -18,8 +18,8 @@ class CityCollection extends JsonResource
             'state' => $this->state->name,
             'city' => [
                 'name' => $this->name,
-                'alias' => $this->alias
-            ]
+                'alias' => $this->alias,
+            ],
         ];
     }
 }
