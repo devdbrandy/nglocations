@@ -24,7 +24,12 @@ class Controller extends BaseController
      *   @OA\Response(
      *     response=200,
      *     description="Successful operation",
-     *     @OA\JsonContent(ref="#/components/schemas/States"),
+     *     @OA\JsonContent(
+     *         @OA\Schema(
+     *              type="array",
+     *              @OA\Items(ref="#/components/schemas/State")
+     *         )
+     *     ),
      *   )
      * )
      *
@@ -95,7 +100,12 @@ class Controller extends BaseController
      *   @OA\Response(
      *     response=200,
      *     description="Successful operation",
-     *     @OA\JsonContent(ref="#/components/schemas/Cities"),
+     *     @OA\JsonContent(
+     *         @OA\Schema(
+     *             type="array",
+     *             @OA\Items(ref="#/components/schemas/City")
+     *         )
+     *     )
      *   )
      * )
      *
@@ -126,7 +136,12 @@ class Controller extends BaseController
      *   @OA\Response(
      *     response=200,
      *     description="Successful operation",
-     *     @OA\JsonContent(ref="#/components/schemas/LGAs"),
+     *     @OA\JsonContent(
+     *         @OA\Schema(
+     *             type="array",
+     *             @OA\Items(ref="#/components/schemas/LGA")
+     *         )
+     *     )
      *   )
      * )
      *
@@ -150,7 +165,12 @@ class Controller extends BaseController
      *   @OA\Response(
      *     response=200,
      *     description="Successful operation",
-     *     @OA\JsonContent(ref="#/components/schemas/LGAs"),
+     *     @OA\JsonContent(
+     *         @OA\Schema(
+     *             type="array",
+     *             @OA\Items(ref="#/components/schemas/LGA")
+     *         )
+     *     )
      *   )
      * )
      *

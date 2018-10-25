@@ -26,13 +26,6 @@ namespace App\Models;
  *     ),
  * )
  *
- * @OA\Schema(
- *     schema="LGAs",
- *     type="array",
- *     description="A list of LGAs",
- *     @OA\Items(ref="#/components/schemas/LGA")
- * )
- *
  */
 class LGA extends BaseModel
 {

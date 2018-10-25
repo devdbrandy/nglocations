@@ -16,13 +16,6 @@ namespace App\Models;
  *     ),
  * )
  *
- * @OA\Schema(
- *     schema="Cities",
- *     type="array",
- *     description="A list of Cities",
- *     @OA\Items(ref="#/components/schemas/City")
- * )
- *
  */
 class City extends BaseModel
 {

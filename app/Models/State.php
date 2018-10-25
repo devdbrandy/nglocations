@@ -36,14 +36,6 @@ namespace App\Models;
  *     ),
  * )
  *
- *
- * @OA\Schema(
- *     schema="States",
- *     type="array",
- *     description="A list of states",
- *     @OA\Items(ref="#/components/schemas/State")
- * )
- *
  */
 
 class State extends BaseModel
