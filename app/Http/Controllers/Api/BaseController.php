@@ -32,7 +32,6 @@ use App\Http\Controllers\Controller;
  *         description="Error message"
  *     ),
  * )
- *
  */
 class BaseController extends Controller
 {

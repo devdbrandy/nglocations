@@ -15,7 +15,6 @@ namespace App\Models;
  *         description="The city alias"
  *     ),
  * )
- *
  */
 class City extends BaseModel
 {

@@ -35,9 +35,7 @@ namespace App\Models;
  *         description="The state longitude"
  *     ),
  * )
- *
  */
-
 class State extends BaseModel
 {
     /**

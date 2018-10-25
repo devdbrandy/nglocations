@@ -25,7 +25,6 @@ namespace App\Models;
  *         description="The LGA longitude cordinate"
  *     ),
  * )
- *
  */
 class LGA extends BaseModel
 {
