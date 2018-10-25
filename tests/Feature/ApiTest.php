@@ -145,4 +145,16 @@ class ApiTest extends TestCase
             ->assertStatus(200)
             ->assertJsonStructure(['state']);
     }
+
+    /**
+     * @test
+     * Test retrieves all zones.
+     *
+     * @return void
+     */
+    public function get_all_zones()
+    {
+        $response = $this->get('/api/v1/zones');
+        $response->assertStatus(200)->assertJsonCount(6);
+    }
 }

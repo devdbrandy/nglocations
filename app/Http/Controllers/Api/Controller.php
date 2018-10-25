@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\LGA;
+use App\Models\Zone;
 use App\Models\State;
 use Illuminate\Http\Request;
 use App\Http\Resources\LgaResource;
@@ -218,5 +219,33 @@ class Controller extends BaseController
     public function getLGA(Request $request, LGA $lga)
     {
         return new LgaResource($lga);
+    }
+
+    /**
+     * @OA\Get(
+     *   path="/zones",
+     *   tags={"Get list of geopolitical zones"},
+     *   summary="Get list of geoplolical zones",
+     *   description="Returns list of Zone object",
+     *   operationId="getZones",
+     *   @OA\Response(
+     *     response=200,
+     *     description="Successful operation",
+     *     @OA\JsonContent(
+     *         @OA\Schema(
+     *             type="array",
+     *             @OA\Items(ref="#/components/schemas/Zone")
+     *         )
+     *     )
+     *   )
+     * )
+     *
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getZones()
+    {
+        return response()->json(Zone::all());
     }
 }

@@ -4,6 +4,21 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+* @OA\Schema(
+*     @OA\Property(
+*         property="code",
+*         type="string",
+*         description="The unique identifier for the zone resource"
+*     ),
+*     @OA\Property(
+*         property="name",
+*         type="string",
+*         description="The zone name"
+*     )
+* )
+*
+*/
 class Zone extends Model
 {
     /**

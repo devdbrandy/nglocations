@@ -28,3 +28,6 @@ Route::group(['prefix' => 'states'], function () {
 // lgas endpoints
 Route::get('lgas', 'Api\Controller@getLGAsAll');
 Route::get('lgas/{lga}', 'Api\Controller@getLGA')->name('api.lgas.show');
+
+// Zones enpoints
+Route::get('zones', 'Api\Controller@getZones');
