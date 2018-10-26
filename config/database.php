@@ -1,5 +1,24 @@
 <?php
 
+if (env('DATABASE_URL')) {
+    $url = parse_url(env('DATABASE_URL'));
+
+    putenv('DB_HOST='.$url['host']);
+    putenv('DB_PORT='.$url['port']);
+    putenv('DB_DATABASE='.substr($url['path'], 1));
+    putenv('DB_USERNAME='.$url['user']);
+    putenv('DB_PASSWORD='.$url['pass']);
+}
+
+// Configure redis remote server
+if (env('REDIS_URL')) {
+    $url = parse_url(env('REDIS_URL'));
+
+    putenv('REDIS_HOST='.$url['host']);
+    putenv('REDIS_PORT='.$url['port']);
+    putenv('REDIS_PASSWORD='.$url['pass']);
+}
+
 return [
 
     /*
