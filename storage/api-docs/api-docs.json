@@ -2,20 +2,20 @@
     "openapi": "3.0.0",
     "info": {
         "title": "NGLocations API",
-        "description": "REST API that allows users to retrieve information of all states in Nigeria.",
+        "description": "Open Source REST API that allows users to retrieve information of all states, cities, local government areas and geopolitical zones in Nigeria.",
         "contact": {
             "name": "DayliciousSoft",
             "email": "daylicious@gmail.com"
         },
         "license": {
-            "name": "MIT",
-            "url": "https://opensource.org/licenses/MIT"
+            "name": "Visit Repository",
+            "url": "https://github.com/devdbrandy/nglocations"
         },
         "version": "1.0.0"
     },
     "servers": [
         {
-            "url": "http://nglocal.me/api",
+            "url": "http://nglocations.me/api/v1",
             "description": "Server url"
         }
     ],
@@ -33,9 +33,7 @@
                         "description": "Successful operation",
                         "content": {
                             "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/States"
-                                }
+                                "schema": {}
                             }
                         }
                     }
@@ -109,9 +107,7 @@
                         "description": "Successful operation",
                         "content": {
                             "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Cities"
-                                }
+                                "schema": {}
                             }
                         }
                     }
@@ -142,9 +138,7 @@
                         "description": "Successful operation",
                         "content": {
                             "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/LGAs"
-                                }
+                                "schema": {}
                             }
                         }
                     }
@@ -164,9 +158,7 @@
                         "description": "Successful operation",
                         "content": {
                             "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/LGAs"
-                                }
+                                "schema": {}
                             }
                         }
                     }
@@ -215,6 +207,69 @@
                     }
                 }
             }
+        },
+        "/zones": {
+            "get": {
+                "tags": [
+                    "Get list of geopolitical zones"
+                ],
+                "summary": "Get list of geoplolical zones",
+                "description": "Returns list of Zone object",
+                "operationId": "getZones",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/zones/{zone}": {
+            "get": {
+                "tags": [
+                    "Get a single zone"
+                ],
+                "summary": "Retrieve a single zone",
+                "description": "Returns a Zone object",
+                "operationId": "getZone",
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "path",
+                        "description": "Unique identifier for zone",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Zone"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     },
     "components": {
@@ -241,13 +296,6 @@
                 },
                 "type": "object"
             },
-            "Cities": {
-                "description": "A list of Cities",
-                "type": "array",
-                "items": {
-                    "$ref": "#/components/schemas/City"
-                }
-            },
             "LGA": {
                 "properties": {
                     "name": {
@@ -268,13 +316,6 @@
                     }
                 },
                 "type": "object"
-            },
-            "LGAs": {
-                "description": "A list of LGAs",
-                "type": "array",
-                "items": {
-                    "$ref": "#/components/schemas/LGA"
-                }
             },
             "State": {
                 "properties": {
@@ -305,12 +346,18 @@
                 },
                 "type": "object"
             },
-            "States": {
-                "description": "A list of states",
-                "type": "array",
-                "items": {
-                    "$ref": "#/components/schemas/State"
-                }
+            "Zone": {
+                "properties": {
+                    "code": {
+                        "description": "The unique identifier for the zone resource",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "The zone name",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
             }
         }
     }

@@ -17,7 +17,7 @@
 </p>
 
 ## 1. Overview
-The NGLocations is an Open Source REST API that allows users to retrieve information of all states and geopolitical zones in Nigeria. Informations include [states](#41-get-all-states), [cities](#43-list-cities-in-a-state), [local government areas](#44-list-local-governament-areas-in-a-state), [geopolical zones](#) etc.
+The NGLocations is an Open Source REST API that allows users to retrieve information of all states and geopolitical zones in Nigeria. Informations include [states](#41-get-all-states), [cities](#43-list-cities-in-a-state), [local government areas](#44-list-local-governament-areas-in-a-state), [geopolical zones](#) etc. For an interactive flow and more, [visit documentations](https://nglocations.herokuapp.com).
 
 ## 2. Table of Contents
 
@@ -33,9 +33,10 @@ The NGLocations is an Open Source REST API that allows users to retrieve informa
     - [4.4. List Local Governament Areas in a state](#44-list-local-governament-areas-in-a-state)
     - [4.4. Get list of Local Governament Areas](#44-get-list-of-local-governament-areas)
     - [4.4. Get a single Local Government Area](#44-get-a-single-local-government-area)
+    - [4.5. Get list of zones](#45-get-list-of-zones)
 - [5. Operations](#5-operations)
     - [5.1. Custom Querystring Params](#51-custom-querystring-params)
-- [5. License](#5-license)
+- [6. License](#6-license)
 
 ## 3. Installation
 
@@ -82,15 +83,7 @@ API endpoint that represents a list of states
             "alias": "abia",
             "href": "http://nglocations.me/api/v1/states/abia"
         }
-        ...
     ]
-  ```
-- **Error Response**
-  - **Code:** `404 Not Found`
-  - **Content:**
-  
-  ```http
-    {"error": "Resource does not exist"}
   ```
 - **Usage Sample:**
 
@@ -115,7 +108,6 @@ API endpoint that represents a list of states
             "alias": "adamawa",
             "href": "http://nglocations.me/api/v1/states/adamawa"
         },
-        ...
     ]
     ```
 
@@ -194,15 +186,7 @@ API endpoint that represents a list of cities in a state
             "name": "Ikeja",
             "alias": "ikeja"
         },
-        ...
     ]
-  ```
-- **Error Response**
-  - **Code:** `404 Not Found`
-  - **Content:**
-  
-  ```http
-    {"error": "Resource does not exist"}
   ```
 - **Usage Sample:**
 
@@ -223,9 +207,9 @@ API endpoint that represents a list of cities in a state
             "name": "Nsukka",
             "alias": "nsukka"
         },
-        ...
     ]
     ```
+
 ### 4.4. List Local Governament Areas in a state
 
 API endpoint that represents a list of LGAs in a state
@@ -249,15 +233,7 @@ API endpoint that represents a list of LGAs in a state
             "latitude": "6.4530556",
             "longitude": "3.3958333"
         },
-        ...
     ]
-  ```
-- **Error Response**
-  - **Code:** `404 Not Found`
-  - **Content:**
-  
-  ```http
-    {"error": "Resource does not exist"}
   ```
 - **Usage Sample:**
 
@@ -282,9 +258,9 @@ API endpoint that represents a list of LGAs in a state
             "latitude": "6.4530556",
             "longitude": "3.3958333"
         },
-        ...
     ]
     ```
+
 ### 4.4. Get list of Local Governament Areas
 
 API endpoint that represents a list of LGAs
@@ -306,15 +282,7 @@ API endpoint that represents a list of LGAs
                 "href": "http://nglocations.me/api/v1/lgas/aba-north"
             }
         },
-        ...
     ]
-  ```
-- **Error Response**
-  - **Code:** `404 Not Found`
-  - **Content:**
-  
-  ```http
-    {"error": "Resource does not exist"}
   ```
 - **Usage Sample:**
 
@@ -345,9 +313,9 @@ API endpoint that represents a list of LGAs
                 "href": "http://nglocations.me/api/v1/lgas/aba-south"
             }
         },
-        ...
     ]
     ```
+
 ### 4.4. Get a single Local Government Area
 
 API endpoint that represents a single LGA
@@ -396,6 +364,46 @@ API endpoint that represents a single LGA
     }
     ```
 
+### 4.5. Get list of zones
+
+API endpoint that represents a list of deopolitical zones
+- **URL Endpoint:** `/api/v1/zones`
+- **Method:** `GET`
+- **URL Params:** `None`
+- **Request Body:** `None`
+- **Success Response**
+  - **Code:** `200`
+  - **Content:**
+  ```http
+    [
+        {
+            "code": "NC",
+            "name": "North-Central"
+        },
+    ]
+  ```
+- **Usage Sample:**
+
+    ```http
+    GET https://nglocations.me/api/v1/zones
+    HTTP/1.1
+    Accept: application/json
+
+    HTTP/1.1 200 OK
+    Content-Type: application/json
+
+    [
+        {
+            "code": "NC",
+            "name": "North-Central"
+        },
+        {
+            "code": "NE",
+            "name": "North-Eastern"
+        },
+    ]
+    ```
+
 ## 5. Operations
 
 ### 5.1. Custom Querystring Params
@@ -407,7 +415,7 @@ API Endpoint | Querystring | Result | Example
 `/api/v1/states/{state}` | `capital` | Returns state capital | [/api/v1/states/lagos?capital](#42-get-a-single-state)
 `/api/v1/lgas/{lga}` | `state` | Includes field | [/api/v1/lgas/surulere?state](#44-get-a-single-local-government-area)
 
-## 5. License
+## 6. License
 
 The NGLocations REST API is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
