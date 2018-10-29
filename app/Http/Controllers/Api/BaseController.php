@@ -8,15 +8,19 @@ use App\Http\Controllers\Controller;
  * @OA\Info(
  *     version="1.0.0",
  *     title="NGLocations API",
- *     description="REST API that allows users to retrieve information of all states in Nigeria.",
+ *     description="Open Source REST API that allows users to retrieve information of all states, cities, local government areas and geopolitical zones in Nigeria.",
  *     @OA\Contact(
  *         name="DayliciousSoft",
  *         email="daylicious@gmail.com"
  *     ),
  *     @OA\License(
- *         name="MIT",
+ *         name="Visit Repository",
+ *         url="https://github.com/devdbrandy/nglocations"
+ *     ),
+ *     @OA\License(
+ *         name="MIT License",
  *         url="https://opensource.org/licenses/MIT"
- *     )
+ *     ),
  * )
  *
  * @OA\Server(
