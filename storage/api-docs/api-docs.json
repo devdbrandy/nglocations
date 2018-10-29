@@ -15,7 +15,7 @@
     },
     "servers": [
         {
-            "url": "http://nglocations.me/api/v1",
+            "url": "http://nglocations.herokuapp.com/api/v1",
             "description": "Server url"
         }
     ],
