@@ -6,10 +6,10 @@
     <a href="https://app.codeship.com/projects/07f963d0-b856-0136-e4a9-6ec9e9b18678">
         <img src="https://app.codeship.com/projects/07f963d0-b856-0136-e4a9-6ec9e9b18678/status?branch=develop" alt="Build Status">
     </a>
-    <a href='https://coveralls.io/github/devdbrandy/nglocations?branch=develop'>
+    <!--<a href='https://coveralls.io/github/devdbrandy/nglocations?branch=develop'>
         <img src='https://coveralls.io/repos/github/devdbrandy/nglocations/badge.svg?branch=develop'
             alt='Coverage Status'>
-    </a>
+    </a>-->
     <a href="https://opensource.org/licenses/MIT">
         <img src="https://img.shields.io/badge/License-MIT-yellow.svg">
     </a>
