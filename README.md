@@ -48,7 +48,6 @@ cd nglocations
 composer install
 cp .env.example .env
 php artisan key:generate
-php artisan serve
 ```
 
 Pre-fill `DB_HOST`, `DB_PORT`, `DB_USERNAME`, `DB_PASSWORD` with database credentials. Then run:
