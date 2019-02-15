@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "47eaf26f40e767023884ff5fa0aa77d0",
@@ -1532,16 +1532,16 @@
         },
         {
             "name": "spatie/laravel-sluggable",
-            "version": "2.1.4",
+            "version": "2.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-sluggable.git",
-                "reference": "2f383e6957b544b200203ca717000b57189ca045"
+                "reference": "031a5f1c7cee4128849a288625ce67d29be57aee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-sluggable/zipball/2f383e6957b544b200203ca717000b57189ca045",
-                "reference": "2f383e6957b544b200203ca717000b57189ca045",
+                "url": "https://api.github.com/repos/spatie/laravel-sluggable/zipball/031a5f1c7cee4128849a288625ce67d29be57aee",
+                "reference": "031a5f1c7cee4128849a288625ce67d29be57aee",
                 "shasum": ""
             },
             "require": {
@@ -1577,7 +1577,7 @@
                 "laravel-sluggable",
                 "spatie"
             ],
-            "time": "2018-08-28T14:09:46+00:00"
+            "time": "2019-02-14T13:23:51+00:00"
         },
         {
             "name": "swagger-api/swagger-ui",
